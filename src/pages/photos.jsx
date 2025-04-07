@@ -33,20 +33,20 @@ function Photos() {
 
         {/* Responsive Photo Grid */}
         <div className="columns-1 sm:columns-2 md:columns-3 gap-5 space-y-5">
-          <img src="photos/1.JPG" alt="1" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/3.JPG" alt="3" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/6.JPG" alt="6" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/8.JPG" alt="8" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/9.JPG" alt="9" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/12.JPG" alt="12" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/13.JPG" alt="13" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/18.JPG" alt="18" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/25.JPG" alt="25" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/27.JPG" alt="27" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/28.JPG" alt="28" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/29.JPG" alt="29" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/30.JPG" alt="30" className="w-full rounded-md" loading="lazy" />
-          <img src="photos/45.JPG" alt="45" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/1.jpg" alt="1" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/3.jpg" alt="3" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/6.jpg" alt="6" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/8.jpg" alt="8" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/9.jpg" alt="9" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/12.jpg" alt="12" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/13.jpg" alt="13" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/18.jpg" alt="18" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/25.jpg" alt="25" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/27.jpg" alt="27" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/28.jpg" alt="28" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/29.jpg" alt="29" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/30.jpg" alt="30" className="w-full rounded-md" loading="lazy" />
+          <img src="photos/45.jpg" alt="45" className="w-full rounded-md" loading="lazy" />
         </div>
 
         {/* Social Links Footer */}

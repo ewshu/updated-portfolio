@@ -2,6 +2,14 @@ import { Github, Linkedin, Twitter, ArrowUpRight, Instagram } from "lucide-react
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
+// ✅ Logo imports
+import fluxmarineLogo from './assets/logos/fluxmarine.png'
+import welshLogo from './assets/logos/welshhouse.png'
+import morningbrewLogo from './assets/logos/morningbrew.png'
+import allegionLogo from './assets/logos/allegion.svg'
+import eeLogo from './assets/logos/ee.png'
+import osuLogo from './assets/logos/osulogo.png'
+
 function App() {
   return (
     <div className="bg-[hsl(0,0%,10%)] text-[hsl(0,0%,90%)]">
@@ -38,78 +46,34 @@ function App() {
         <section id="projects" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left column (Mechanical Projects) */}
             <div className="space-y-4">
-              <Project
-                title="Formula Buckeyes FSAE"
-                link=""
-                description="suspension design"
-              />
-              <Project
-                title="Interconnect Design @Allegion"
-                link=""
-                description="electro-mechanical residential locks"
-              />
-              <Project
-                title="Rocket Trajectory Optimization"
-                link="/rocket-optimization"
-                description="predicting starship trajectory using CASADI"
-              />
-              <Project
-                title="Four Bar Mechanism"
-                link=""
-                description="motion study on 4-bars interaction"
-              />
-              <Project
-                title="3D Top-Opt Solver (WIP)"
-                link=""
-                description="visualization of primitive-based top-opt"
-              />
+              <Project title="Formula Buckeyes FSAE" link="" description="suspension design" />
+              <Project title="Interconnect Design @Allegion" link="" description="electro-mechanical residential locks" />
+              <Project title="Rocket Trajectory Optimization" link="/rocket-optimization" description="predicting starship trajectory using CASADI" />
+              <Project title="Four Bar Mechanism" link="" description="motion study on 4-bars interaction" />
+              <Project title="3D Top-Opt Solver (WIP)" link="" description="visualization of primitive-based top-opt" />
             </div>
-
-            {/* Right column (Other Projects) */}
             <div className="space-y-4">
-              <Project
-                title="Arduino and Raspberry Pi Projects"
-                link="/arduino-projects"
-                description="mini-keyboard, rfid-lock and alexa-blinds"
-              />
-              <Project
-                title="F1 Prediction Analysis"
-                link=""
-                description="predicting f1 results with historical data"
-              />
-              <Project
-                title="Flight Delay Analysis"
-                link="https://www.howlateisyourflight.com/"
-                description="find the best airline for your trip"
-              />
-              <Project
-                title="Pathfinder Robot"
-                link=""
-                description="using Dijkstra's Algorithm"
-              />
-              <Project
-                title="Engineering Sensor Calibrations"
-                link=""
-                description="sensors I have worked on"
-              />
+              <Project title="Arduino and Raspberry Pi Projects" link="/arduino-projects" description="mini-keyboard, rfid-lock and alexa-blinds" />
+              <Project title="F1 Prediction Analysis" link="" description="predicting f1 results with historical data" />
+              <Project title="Flight Delay Analysis" link="https://www.howlateisyourflight.com/" description="find the best airline for your trip" />
+              <Project title="Pathfinder Robot" link="" description="using Dijkstra's Algorithm" />
+              <Project title="Engineering Sensor Calibrations" link="" description="sensors I have worked on" />
             </div>
           </div>
         </section>
 
-
         {/* Experience */}
         <section id="experience" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Experience</h2>
-          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="src/assets/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#0d0e0e" />
-          <Experience title="Welsh House Capital" subtitle="Private Equity" logo="src/assets/logos/welshhouse.png" link="https://welshhouse.co" bg="#f0f0f0" />
-          <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo="src/assets/logos/morningbrew.png" link="https://www.morningbrew.com/" bg="#bce3ff" />
-          <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="src/assets/logos/allegion.svg" link="https://www.allegion.com" bg="#ffe9d9" />
-          <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo="src/assets/logos/ee.png" link="https://ecosystem-energy.com" bg="#defee9" />
+          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo={fluxmarineLogo} link="https://fluxmarine.com" bg="#0d0e0e" />
+          <Experience title="Welsh House Capital" subtitle="Private Equity" logo={welshLogo} link="https://welshhouse.co" bg="#f0f0f0" />
+          <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo={morningbrewLogo} link="https://www.morningbrew.com/" bg="#bce3ff" />
+          <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo={allegionLogo} link="https://www.allegion.com" bg="#ffe9d9" />
+          <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo={eeLogo} link="https://ecosystem-energy.com" bg="#defee9" />
           <Experience title="Engie" subtitle="Project Engineering Intern" logo={null} link="https://www.engie-na.com/" bg="#d0e8ff" />
-          <Experience title="Ohio State University (MMIDL)" subtitle="Undegraduate Researcher" logo="src/assets/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
-          <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials (ME2010 & ME2020)" logo="src/assets/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials (ME2010 & ME2020)" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
         </section>
 
         {/* Research */}
@@ -122,7 +86,7 @@ function App() {
         {/* Education */}
         <section id="education" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Education</h2>
-          <Experience title="The Ohio State University" subtitle="Mechanical Engineering, Bachelors" logo="src/assets/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="The Ohio State University" subtitle="Mechanical Engineering, Bachelors" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
         </section>
 
         {/* Awards */}
@@ -136,13 +100,10 @@ function App() {
           </div>
         </section>
 
-
         {/* Now */}
         <section id="now" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Now</h2>
-          <p className="text-white">
-            reading, learning piano, and working on ideas for a cleaner future.
-          </p>
+          <p className="text-white">reading, learning piano, and working on ideas for a cleaner future.</p>
           <div className="h-64 rounded-md overflow-hidden">
             <MapContainer center={[41.5801, -71.4774]} zoom={9} scrollWheelZoom={false} className="h-full w-full z-0">
               <TileLayer
