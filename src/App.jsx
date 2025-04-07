@@ -23,7 +23,7 @@ function App() {
             </p>
             <p>
               Passionate about engineering, finance, and startups.<br />
-              Seeking <strong className="text-white">Full-Time Mechanical Engineering roles</strong> from December 2025.
+              Seeking <strong className="text-white">full-time engineering roles</strong> from december 2025.
             </p>
             <p>
               Reach out at <a
