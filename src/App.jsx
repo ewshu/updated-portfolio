@@ -2,17 +2,10 @@ import { Github, Linkedin, Twitter, ArrowUpRight, Instagram } from "lucide-react
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
-// ✅ Logo imports
-import fluxmarineLogo from './assets/logos/fluxmarine.png'
-import welshLogo from './assets/logos/welshhouse.png'
-import morningbrewLogo from './assets/logos/morningbrew.png'
-import allegionLogo from './assets/logos/allegion.svg'
-import eeLogo from './assets/logos/ee.png'
-import osuLogo from './assets/logos/osulogo.png'
-
 function App() {
   return (
     <div className="bg-[hsl(0,0%,10%)] text-[hsl(0,0%,90%)]">
+      {/* Nav */}
       <header className="flex justify-center gap-10 text-sm pt-6">
         <NavLink label="about" href="#about" />
         <NavLink label="resume" href="/resume" />
@@ -30,9 +23,10 @@ function App() {
             </p>
             <p>
               Passionate about engineering, finance, and startups.<br />
-              Seeking <strong className="text-white"> Full-Time Mechanical Engineering roles</strong> from December 2025.
+              Seeking <strong className="text-white">Full-Time Mechanical Engineering roles</strong> from December 2025.
             </p>
-            <p>Reach out at <a
+            <p>
+              Reach out at <a
                 href="mailto:pamula.3@osu.edu"
                 className="underline decoration-1 underline-offset-4 hover:text-white transition-colors"
               >
@@ -46,6 +40,7 @@ function App() {
         <section id="projects" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Mechanical Projects */}
             <div className="space-y-4">
               <Project title="Formula Buckeyes FSAE" link="" description="suspension design" />
               <Project title="Interconnect Design @Allegion" link="" description="electro-mechanical residential locks" />
@@ -53,6 +48,8 @@ function App() {
               <Project title="Four Bar Mechanism" link="" description="motion study on 4-bars interaction" />
               <Project title="3D Top-Opt Solver (WIP)" link="" description="visualization of primitive-based top-opt" />
             </div>
+
+            {/* Other Projects */}
             <div className="space-y-4">
               <Project title="Arduino and Raspberry Pi Projects" link="/arduino-projects" description="mini-keyboard, rfid-lock and alexa-blinds" />
               <Project title="F1 Prediction Analysis" link="" description="predicting f1 results with historical data" />
@@ -66,14 +63,14 @@ function App() {
         {/* Experience */}
         <section id="experience" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Experience</h2>
-          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo={fluxmarineLogo} link="https://fluxmarine.com" bg="#0d0e0e" />
-          <Experience title="Welsh House Capital" subtitle="Private Equity" logo={welshLogo} link="https://welshhouse.co" bg="#f0f0f0" />
-          <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo={morningbrewLogo} link="https://www.morningbrew.com/" bg="#bce3ff" />
-          <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo={allegionLogo} link="https://www.allegion.com" bg="#ffe9d9" />
-          <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo={eeLogo} link="https://ecosystem-energy.com" bg="#defee9" />
+          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#0d0e0e" />
+          <Experience title="Welsh House Capital" subtitle="Private Equity" logo="/logos/welshhouse.png" link="https://welshhouse.co" bg="#f0f0f0" />
+          <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo="/logos/morningbrew.png" link="https://www.morningbrew.com/" bg="#bce3ff" />
+          <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="/logos/allegion.svg" link="https://www.allegion.com" bg="#ffe9d9" />
+          <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo="/logos/ee.png" link="https://ecosystem-energy.com" bg="#defee9" />
           <Experience title="Engie" subtitle="Project Engineering Intern" logo={null} link="https://www.engie-na.com/" bg="#d0e8ff" />
-          <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
-          <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials (ME2010 & ME2020)" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
         </section>
 
         {/* Research */}
@@ -86,16 +83,16 @@ function App() {
         {/* Education */}
         <section id="education" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Education</h2>
-          <Experience title="The Ohio State University" subtitle="Mechanical Engineering, Bachelors" logo={osuLogo} link="https://mae.osu.edu/" bg="#eeeeee" />
+          <Experience title="The Ohio State University" subtitle="Mechanical Engineering, Bachelors" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#eeeeee" />
         </section>
 
         {/* Awards */}
         <section id="Awards" className="space-y-5">
           <h2 className="text-lg font-semibold text-muted-foreground">Awards</h2>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p><strong className="text-white">Fintech Pitch Competition @ Fisher College </strong> — Inaugural Winner '23</p>
+            <p><strong className="text-white">Fintech Pitch Competition @ Fisher College</strong> — Inaugural Winner '23</p>
             <p><strong className="text-white">Launchpad @ Ohio State</strong> — Winner '22 and '23</p>
-            <p><strong className="text-white">Formula SAE Michigan (ICE)</strong> — 3rd 2023 and 1st 2024 Overall (Formula Buckeyes)</p>
+            <p><strong className="text-white">Formula SAE Michigan (ICE)</strong> — 3rd 2023 and 1st 2024 Overall</p>
             <p><strong className="text-white">Undergraduate Engineering Research Grant Recipient</strong></p>
           </div>
         </section>
@@ -119,7 +116,7 @@ function App() {
           </div>
         </section>
 
-        {/* Socials */}
+        {/* Footer */}
         <footer className="flex justify-center gap-6 pt-12">
           <SocialLink href="https://github.com/ewshu" icon={Github} />
           <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
@@ -131,7 +128,6 @@ function App() {
   )
 }
 
-// Project
 function Project({ title, link, description }) {
   return (
     <div className="space-y-1">
@@ -144,7 +140,6 @@ function Project({ title, link, description }) {
   )
 }
 
-// Experience
 function Experience({ title, subtitle, logo, link, bg }) {
   return (
     <div className="flex items-center gap-4">
@@ -159,7 +154,6 @@ function Experience({ title, subtitle, logo, link, bg }) {
   )
 }
 
-// Research
 function Research({ title, link, description }) {
   return (
     <div className="space-y-1">
@@ -172,7 +166,6 @@ function Research({ title, link, description }) {
   )
 }
 
-// Social Link
 function SocialLink({ href, icon: Icon }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
@@ -181,7 +174,6 @@ function SocialLink({ href, icon: Icon }) {
   )
 }
 
-// Nav Link
 function NavLink({ label, href }) {
   const isExternal = href.startsWith("http")
   return (
