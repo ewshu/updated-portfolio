@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="bg-[hsl(0,0%,10%)] text-[hsl(0,0%,90%)]">
       {/* Nav */}
-      <header className="flex justify-center gap-10 text-sm pt-6">
+      <header className="flex justify-center gap-5 text-sm pt-6">
         <NavLink label="about" href="#about" />
         <NavLink label="resume" href="/resume" />
         <NavLink label="portfolio" href="#projects" />
