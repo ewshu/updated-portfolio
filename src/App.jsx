@@ -94,6 +94,8 @@ function App() {
             <p><strong className="text-white">Launchpad @ Ohio State</strong> — Winner '22 and '23</p>
             <p><strong className="text-white">Formula SAE Michigan (ICE)</strong> — 3rd 2023 and 1st 2024 Overall</p>
             <p><strong className="text-white">Undergraduate Engineering Research Grant Recipient</strong></p>
+            <p><strong className="text-white">Best Undergraduate Teaching Assistant</strong> - Runner Up</p>
+
           </div>
         </section>
 
