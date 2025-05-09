@@ -16,7 +16,7 @@ function SocialLink({ href, icon: Icon }) {
 
 function Photos() {
   return (
-    <div className="bg-[hsl(0,0%,10%)] text-[hsl(0,0%,90%)] min-h-screen">
+      <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Top Nav */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 text-sm">
         <NavLink label="about" href="/" />
@@ -27,7 +27,7 @@ function Photos() {
 
       {/* Page Body */}
       <main className="max-w-4xl mx-auto px-4 pt-32 pb-16">
-        <p className="text-muted-foreground text-base mb-8">
+        <p className="text-base mb-8">
           I love to shoot film (35mm) on my Minolta SRT & Nikon N8008. Here are some of my faves.
         </p>
 

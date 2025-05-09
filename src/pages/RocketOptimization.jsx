@@ -1,67 +1,74 @@
 import { Link } from "react-router-dom"
-import { useTheme } from "../components/theme-provider"
+import { ArrowLeft } from "lucide-react"
 
 function RocketOptimization() {
-  const { theme } = useTheme()
-
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
-      <nav className="border-b py-4 px-4">
-        <div className="container mx-auto">
-          <Link to="/" className="text-foreground hover:text-slate-400">← Back to Home</Link>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
+      {/* Nav - Same as home page */}
+      <header className="flex justify-center gap-5 text-sm pt-6">
+        <NavLink label="about" href="/#about" />
+        <NavLink label="resume" href="/resume" />
+        <NavLink label="portfolio" href="/#projects" />
+        <NavLink label="photos" href="/photos" />
+      </header>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-4xl font-bold text-foreground text-center">Rocket Landing Trajectory Optimization</h1>
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto space-y-7">
+          <header className="space-y-3">
+            <h1 className="text-4xl font-bold text-black">Rocket Landing Trajectory Optimization</h1>
+            <p className="text-gray-600">Physics-based predictive models for SpaceX Starship landing</p>
+          </header>
 
-            {/* Project Overview */}
-            <div className="space-y-6 text-foreground">
+          {/* Project Overview */}
+          <section className="space-y-5">
+            <div className="space-y-4 text-gray-700">
               <p>
-                During Starship SN15's scrubbed launch window, I developed a 2D simulation of its landing maneuver. After optimizing the flight dynamics model, I recreated the vehicle's signature "belly flop" to a vertical landing sequence.
+                During Starship SN15's scrubbed launch window, I developed a 2D simulation of its landing maneuver. After optimizing the flight dynamics model, I recreated the vehicle's signature "belly flop" to vertical landing sequence.
               </p>
               <p>
                 Compared to actual SpaceX footage, the simulation showed remarkable accuracy - despite being developed purely from first principles without reference to empirical data.
               </p>
             </div>
+          </section>
 
-            {/* Understanding Optimal Trajectories */}
-            <div className="space-y-2">
-              <h2 className="text-2xl font-bold text-foreground">Understanding Optimal Trajectories</h2>
-              <p className="text-foreground">
+          {/* Understanding Optimal Trajectories */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold text-black">Understanding Optimal Trajectories</h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
                 In trajectory optimization, "optimal" refers to finding the best path to achieve a goal. Consider walking to your fridge - while countless paths exist, some are better than others.
               </p>
 
-              <div className="rounded-lg overflow-hidden shadow-lg">
+              <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
                 <img
-                  src="src/assets/logos/rocketrajectory.webp"
+                  src="/public/logos/rocketrajectory.webp"
                   alt="Rocket trajectory optimization diagram"
                   className="w-full h-auto"
                 />
               </div>
 
-              <p className="text-foreground">
+              <p>
                 To determine the best path, we define a "cost function" (similar to machine learning). A simple cost function might measure path length. However, this can lead to impractical solutions - a shortest-path algorithm would ignore obstacles like a pit on the floor.
               </p>
-              <p className="text-foreground">
+              <p>
                 A more sophisticated approach uses "effort" as the cost function. In this model, each step on safe ground might cost 1 unit, while traversing dangerous areas costs significantly more (e.g., 1000 units). This better reflects real-world optimization problems, like Starship's landing trajectory, where we balance multiple factors including fuel usage, structural loads, and safety margins.
               </p>
-              <p className="text-foreground">
+              <p>
                 The final piece is adding constraints - rules defining valid solutions. These ensure our optimization stays within physical and practical limits while minimizing our chosen cost function.
               </p>
             </div>
+          </section>
 
-            {/* Code Section */}
-            <div className="space-y-2">
-              <h2 className="text-2xl font-bold text-foreground">Trajectory Optimization Code</h2>
-              <p className="text-foreground">
+          {/* Code Section */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold text-black">Trajectory Optimization Code</h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
                 While waiting for Starship SN15's launch (which was ultimately scrubbed), I developed a physics-based optimization model to simulate its distinctive landing maneuver. Here's the key code that made it work:
               </p>
 
-              <div className="bg-slate-900 rounded-lg p-6">
-                <pre className="text-sm text-slate-100 font-mono overflow-x-auto p-4">
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+                <pre className="text-sm text-gray-100 font-mono overflow-x-auto p-4">
                   <code>{`# Physical parameters for Starship
 self.m = 100000  # kg (total mass)
 self.length = 50  # m
@@ -70,10 +77,10 @@ self.max_gimbal = np.deg2rad(20)`}</code>
                 </pre>
               </div>
 
-              <p className="text-foreground">The optimization minimized a cost function balancing engine effort and stability:</p>
+              <p>The optimization minimized a cost function balancing engine effort and stability:</p>
 
-              <div className="bg-slate-900 rounded-lg p-6">
-                <pre className="text-sm text-slate-100 font-mono overflow-x-auto p-4">
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+                <pre className="text-sm text-gray-100 font-mono overflow-x-auto p-4">
                   <code>{`cost = 0
 for i in range(self.N - 1):
     cost += U[0, i] ** 2  # Minimize thrust
@@ -82,31 +89,56 @@ for i in range(self.N - 1):
                 </pre>
               </div>
 
-              <p className="text-foreground">
+              <p>
                 What proved particularly remarkable was comparing the simulation output against actual SpaceX landing footage—the trajectories aligned with surprising accuracy, despite the model being developed purely from first principles without reference to empirical flight data.
               </p>
             </div>
+          </section>
 
-            {/* Video Section */}
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-foreground">Animated Trajectory</h2>
-              <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto"
-                >
-                  <source src="src/assets/logos/starship_landing.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+          {/* Video Section */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold text-black">Animated Trajectory</h2>
+            <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto"
+              >
+                <source src="/public/logos/starship_landing.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+          </section>
+
+          {/* Bottom Navigation */}
+          <div className="pt-8">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Portfolio
+            </Link>
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function NavLink({ label, href }) {
+  const isExternal = href.startsWith("http");
+  return (
+    <a
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="px-3 py-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+    >
+      {label}
+    </a>
   )
 }
 

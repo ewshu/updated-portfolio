@@ -1,133 +1,117 @@
 import { Link } from "react-router-dom"
-import { useTheme } from "../components/theme-provider"
+import { Github, Linkedin, Twitter, ArrowUpRight, Instagram, ArrowLeft } from "lucide-react"
 
 function ArduinoProjects() {
-  const { theme } = useTheme()
-
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
-      <nav className="border-b py-4 px-4">
-        <div className="container mx-auto">
-          <Link to="/" className="text-foreground hover:text-slate-400">← Back to Home</Link>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
+      {/* Nav - Same as home page */}
+      <header className="flex justify-center gap-5 text-sm pt-6">
+        <NavLink label="about" href="/#about" />
+        <NavLink label="resume" href="/resume" />
+        <NavLink label="portfolio" href="/#projects" />
+        <NavLink label="photos" href="/photos" />
+      </header>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <h1 className="text-4xl font-bold text-foreground text-center">Arduino Side Quests</h1>
-
-          {/* Mini Keyboard Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-foreground text-center">Custom Mini Keyboard</h2>
-
-            <div className="space-y-4 text-foreground">
-              <p>
-                This personal project was inspired by a compact keyboard I came across on Amazon.
-                The goal was to create a custom mini keyboard featuring my five most frequently used keys:
-                Space, Enter, Escape, Shift, and Delete.
-              </p>
-
-              <p>
-                The design concept was a single, sleek row of five keys. I engineered a stacked
-                acrylic case to house the PCB and an Arduino microcontroller, ensuring compatibility
-                with standard MX Cherry-style keyboard switches. This approach not only streamlined
-                the overall form but also maintained durability and functionality.
-              </p>
-            </div>
-
-            {/* GIF and Images Side by Side */}
-            <div className="grid grid-cols-2 gap-6">
-              {/* Left side - GIF */}
-              <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800 h-full">
-                <img
-                  src="/src/assets/logos/microkeyboard.gif"
-                  alt="Mini Keyboard Demo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Right side - Stacked Images */}
-              <div className="space-y-6">
-                <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
-                  <img
-                    src="/src/assets/logos/mk1.jpg"
-                    alt="Mini Keyboard Construction"
-                    className="w-full h-auto object-cover aspect-video"
-                  />
-                </div>
-                <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
-                  <img
-                    src="/src/assets/logos/mk2.jpeg"
-                    alt="Mini Keyboard Final"
-                    className="w-full h-auto object-cover aspect-video"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto space-y-7">
+          <header className="space-y-3">
+            <h1 className="text-4xl font-bold text-black">Arduino Projects</h1>
+            <p className="text-gray-600">Smart home automation and security solutions built with Arduino</p>
+          </header>
 
           {/* RFID Door Lock Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-foreground text-center">RFID Door Locking Mechanism</h2>
+          <section className="space-y-8">
+            <h2 className="text-2xl font-bold text-black">RFID Door Locking System</h2>
 
-            <div className="space-y-4 text-foreground">
+            <div className="space-y-4 text-gray-700">
               <p>
-                Developed an automatic RFID door locking system for my room, integrating both
-                hardware and software. The design replaces the interior half of a Schlage
-                deadbolt assembly, utilizing the original mounting screws for a seamless fit.
+                Developed an automatic RFID door locking system for my room during Summer 2024, integrating both
+                hardware and software components into one solution. The design
+                replaces only the interior half of a standard Schlage deadbolt assembly, making use of
+                the original mounting screws for a clean installation.
               </p>
               <p>
-                The system allows dynamic management of RFID access: new IDs can be added or
-                removed from the Arduino's EEPROM using a designated master card.
+                The system features RFID access, allowing new authentication cards
+                to be easily added or removed from the Arduino's EEPROM using a designated master card.
               </p>
+              <p>
+                Key components include:
+              </p>
+              <ul className="list-disc list-inside space-y-1 ml-4 text-gray-700">
+                <li>Arduino Nano microcontroller</li>
+                <li>MFRC522 RFID reader module</li>
+                <li>Continuous rotation servo motor</li>
+                <li>Custom 3D-printed mounting bracket</li>
+                <li>Power management circuit with sleep mode for extended battery life</li>
+              </ul>
             </div>
 
-            {/* Video and Image Side by Side */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
+            {/* Images and Video Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Left column - Two stacked images */}
+              <div className="space-y-6">
+                <div className="rounded-lg overflow-hidden shadow-md ">
+                  <img
+                    src="/public/logos/dlock.png"
+                    alt="RFID Door Lock"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-md ">
+                  <img
+                    src="/public/logos/arduino-lock.gif"
+                    alt="RFID Door Lock Installation"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Right column - Vertical Video */}
+              <div className="rounded-lg overflow-hidden  h-full flex items-center">
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full object-cover h-80"
+                  className="w-full h-auto"
                 >
-                  <source src="/src/assets/logos/dlock.mp4" type="video/mp4" />
+                  <source src="/public/logos/dlock.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </div>
-              <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
-                <img
-                  src="/src/assets/logos/dlock.png"
-                  alt="RFID Door Lock"
-                  className="w-full h-80 object-cover"
-                />
               </div>
             </div>
           </section>
 
           {/* Automatic Blind Control Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-foreground text-center">Automatic Blind Control</h2>
+          <section className="space-y-8">
+            <h2 className="text-2xl font-bold text-black">Voice-Controlled Smart Blinds</h2>
 
-            <div className="space-y-4 text-foreground">
+            <div className="space-y-4 text-gray-700">
               <p>
-                As a part of my ME 2900 Arduino project, I made a voice-controlled blind opener that connects with my Alexa.
-                The components used are as follows: NEMA 17 Stepper Motor, Arduino Uno, ADA SM Driver, ESP8266 wifi module, and IR Sensor.
+                For my ME 2900 (Introduction to Mechanical Design) project, I designed and built a voice-controlled blind opener that
+                integrates with Amazon Alexa. This system allows for hands-free operation of window blinds
+                through simple voice commands or scheduled routines. Shoutout to  <a href="https://www.linkedin.com/in/shahil-merchant/" target="_blank" rel="noopener noreferrer" className=" font-extrabold hover:text-black transition-colors hover:underline">Shahil Merchant</a> (ECE) for his help with the code.
               </p>
+              <p>
+                The design utilizes a NEMA 17 stepper motor for precise control over the blind position,
+                enabling partial openings and custom height settings. An IR sensor provides position feedback
+                to maintain calibration and prevent overruns.
+              </p>
+              <p>
+                Technical components include:
+              </p>
+              <ul className="list-disc list-inside space-y-1 ml-4 text-gray-700">
+                <li>NEMA 17 Stepper Motor for precise rotational control</li>
+                <li>Arduino Uno as the main controller</li>
+                <li>Adafruit Motor Shield for stepper motor driving</li>
+                <li>ESP8266 WiFi module for cloud connectivity</li>
+                <li>IR sensor for position detection and calibration</li>
+                <li>Custom mounting brackets and pulley system</li>
+              </ul>
             </div>
 
-            {/* Full-width PDF */}
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800 mb-6">
-                              <iframe
-                src="/src/assets/logos/blinds.pdf"
-                className="w-full h-[600px]"
-                title="Blinds Project Presentation"
-              />
-            </div>
-
-            {/* Full-width Video */}
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-slate-800">
+            {/* Video First */}
+            <div className="rounded-lg overflow-hidden shadow-md ">
               <video
                 autoPlay
                 loop
@@ -135,14 +119,73 @@ function ArduinoProjects() {
                 playsInline
                 className="w-full h-auto object-cover aspect-video"
               >
-                <source src="/src/assets/logos/blinds.mp4" type="video/mp4" />
+                <source src="/public/logos/blinds.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
+
+            {/* Grid of 4 Smaller Images - Centered */}
+            <div className="max-w-2xl mx-auto mb-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-lg overflow-hidden shadow-md border">
+                  <img
+                    src="/public/logos/1blinds.png"
+                    alt="Smart Blinds Component Assembly"
+                    className="w-full h-auto object-cover aspect-square"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-md border">
+                  <img
+                    src="/public/logos/2blinds.png"
+                    alt="Smart Blinds Motor Mount"
+                    className="w-full h-auto object-cover aspect-square"
+                  />
+                </div>
+                <div className="rounded-lg shadow-md border flex items-center justify-center overflow-hidden aspect-square">
+                  <img
+                    src="/public/logos/3blinds.png"
+                    alt="Smart Blinds Circuit Assembly"
+                    className="w-3/4 h-3/4 object-contain"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden ">
+                  <img
+                    src="/public/logos/blinds4.jpg"
+                    alt="Smart Blinds Installation"
+                    className="w-full h-auto object-cover aspect-square"
+                  />
+                </div>
+              </div>
+            </div>
           </section>
+
+          {/* Bottom Navigation */}
+          <div className="pt-8">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Portfolio
+            </Link>
+          </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function NavLink({ label, href }) {
+  const isExternal = href.startsWith("http");
+  return (
+    <a
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="px-3 py-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+    >
+      {label}
+    </a>
   )
 }
 
