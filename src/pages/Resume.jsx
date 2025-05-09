@@ -1,14 +1,17 @@
-import { Card, CardContent } from "@/components/ui/card"
+import React from 'react';
 
 function Resume() {
   return (
-    <div className="min-h-screen bg-background p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-foreground">Resume</h1>
-        {/* Add your resume content here */}
-      </div>
+    <div className="min-h-screen flex flex-col">
+      {/* Full-screen PDF viewer */}
+      <iframe
+        src="/logos/resume.pdf"
+        className="w-full h-screen"
+        title="Eshwar Pamula Resume"
+        style={{ border: 'none' }}
+      />
     </div>
-  )
+  );
 }
 
-export default Resume
+export default Resume;
