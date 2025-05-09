@@ -6,10 +6,10 @@ function MiniKeyboard() {
     <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Nav - Same as home page */}
       <header className="flex justify-center gap-5 text-sm pt-6">
-        <NavLink label="about" href="/#about" />
-        <NavLink label="resume" href="/resume" />
-        <NavLink label="portfolio" href="/#projects" />
-        <NavLink label="photos" href="/photos" />
+        <NavLink label="About" href="/#about" />
+        <NavLink label="Resume" href="/resume" />
+        <NavLink label="Portfolio" href="/#projects" />
+        <NavLink label="Photos" href="/photos" />
       </header>
 
       <div className="container mx-auto px-4 py-12">

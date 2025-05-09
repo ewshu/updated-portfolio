@@ -19,10 +19,10 @@ function Photos() {
       <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Top Nav */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex gap-6 text-sm">
-        <NavLink label="about" href="/" />
-        <NavLink label="resume" href="/resume" />
-        <NavLink label="portfolio" href="/#projects" />
-        <NavLink label="photos" href="/photos" />
+        <NavLink label="About" href="/" />
+        <NavLink label="Resume" href="/resume" />
+        <NavLink label="Portfolio" href="/#projects" />
+        <NavLink label="Photos" href="/photos" />
       </header>
 
       {/* Page Body */}
