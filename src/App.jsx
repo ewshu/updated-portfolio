@@ -1,12 +1,12 @@
 import { Github, Linkedin, Twitter, ArrowUpRight, Instagram } from "lucide-react"
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function App() {
   return (
     <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
-      {/* Nav */}
+      {/* Nav - Improved for mobile */}
       <header className="flex justify-center gap-2 sm:gap-5 text-xs sm:text-sm pt-6 px-2">
         <NavLink label="about" href="#about" />
         <NavLink label="resume" href="/resume" />
@@ -39,7 +39,7 @@ function App() {
         </section>
 
 
-        {/* Projects - Full width with 3 columns on desktop, 2 on tablet, 1 on mobile */}
+        {/* Projects - Full width with 3 columns, 2 columns on medium, 1 column on small */}
         <section id="projects" className="w-full max-w-7xl mx-auto space-y-2.5 px-4">
           <h2 className="text-xl sm:text-2xl font-extrabold text-black text-center">Engineering Work</h2>
           <p className="text-center text-xs sm:text-sm text-gray-600 mb-6 sm:mb-8">
@@ -208,29 +208,12 @@ function App() {
 
 function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if device is mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add event listener
-    window.addEventListener('resize', checkMobile);
-
-    // Clean up
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
   return (
-    <div className="space-y-2 flex flex-col items-center">
+    <div className="space-y-2">
       {/* Image container */}
       <div
         className="aspect-square"
@@ -239,23 +222,23 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
       >
         <a
           href={link || "#"}
-          className="block w-full h-full flex justify-center items-center"
+          className="block w-full h-full"
         >
-          {/* Image with no grayscale on mobile, grayscale on desktop only when not hovered */}
+          {/* Image with grayscale filter that transitions to color on hover */}
           <img
             src={imgSrc}
             alt={title}
             className="w-full h-full object-contain transition-all duration-500"
             style={{
-              filter: isHovered || isMobile ? 'grayscale(0%)' : 'grayscale(100%)',
+              filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
               transform: isHovered ? `scale(${scale * 1.05})` : `scale(${scale})`,
             }}
           />
         </a>
       </div>
 
-      {/* Title and description below image - centered */}
-      <div className="text-center w-full px-1">
+      {/* Title and description below image */}
+      <div className="px-1">
         <h3 className="font-medium text-sm sm:text-base text-black">{title}</h3>
         <p className="text-xs sm:text-sm text-gray-600">{desc}</p>
       </div>
@@ -265,7 +248,7 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
 
 function Project({ title, link, description }) {
   return (
-    <div className="space-y-1 text-center sm:text-left">
+    <div className="space-y-1">
       <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-sm sm:text-base text-black hover:underline underline-offset-4">
         {title}
         <ArrowUpRight className="inline ml-1 h-3 w-3 sm:h-4 sm:w-4 text-gray-600" />
