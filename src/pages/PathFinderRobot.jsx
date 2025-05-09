@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
 
-function PathfinderRobot() {
+function PathFinderRobot() {
   return (
     <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Nav - Same as home page */}
@@ -117,4 +117,4 @@ function NavLink({ label, href }) {
   )
 }
 
-export default PathfinderRobot
+export default PathFinderRobot
