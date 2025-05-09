@@ -49,21 +49,21 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-2">
             <ProjectCard
               title="Formula Buckeyes FSAE"
-              imgSrc="src/assets/projects/formula-buckeyes.png"
+              imgSrc="/assets/projects/formula-buckeyes.png"
               link="/formula-buckeyes"
               desc="suspension design"
               scale={1.5}
             />
             <ProjectCard
               title="Allegion (R&D Intern)"
-              imgSrc="src/assets/projects/interconnect-design.png"
+              imgSrc="/assets/projects/interconnect-design.png"
               link="/allegion"
               desc="electro-mechanical locks"
             />
 
             <ProjectCard
               title="Pathfinder Robot"
-              imgSrc="src/assets/projects/pathfinder-robot.png"
+              imgSrc="/assets/projects/pathfinder-robot.png"
               link="/pathfinder-robot"
               desc="using A* algorithm"
               scale={1.2}
@@ -71,7 +71,7 @@ function App() {
             />
             <ProjectCard
               title="Arduino Projects"
-              imgSrc="src/assets/projects/rfiddoorlock.png"
+              imgSrc="/assets/projects/rfiddoorlock.png"
               link="/arduino-projects"
               desc="rfid-door lock and alexa-blinds"
               scale = {-0.8}
@@ -79,7 +79,7 @@ function App() {
 
             <ProjectCard
               title="5-Pk Mini Keyboard"
-              imgSrc="src/assets/projects/mini-keyboard.png"
+              imgSrc="/assets/projects/mini-keyboard.png"
               link="/mini-keyboard"
               desc="mini-keyboard with 5 most used keys"
               scale={1}
@@ -88,7 +88,7 @@ function App() {
 
             <ProjectCard
               title="Engineering Coursework"
-              imgSrc="src/assets/projects/sensor.png"
+              imgSrc="/assets/projects/sensor.png"
               link="/sensors"
               desc="sensors, designs, & data analysis"
               scale={-0.8}
