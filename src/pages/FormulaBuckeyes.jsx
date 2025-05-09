@@ -59,14 +59,14 @@ function FormulaBuckeyes() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/public/logos/uprights1.png"
+                  src="/logos/uprights1.png"
                   alt="Front Upright Design"
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/public/logos/uprights2.png"
+                  src="/logos/uprights2.png"
                   alt="Rear Upright Design"
                   className="w-full h-auto object-cover"
                 />
@@ -95,7 +95,7 @@ function FormulaBuckeyes() {
             {/* Single Image Centered */}
             <div className="rounded-lg overflow-hidden scale-75">
               <img
-                src="/public/logos/spindle.png"
+                src="/logos/spindle.png"
                 alt="Spindle and Bearing Assembly"
                 className="w-full h-auto object-cover"
               />
@@ -123,14 +123,14 @@ function FormulaBuckeyes() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-lg overflow-hidden ">
                 <img
-                  src="/public/logos/arb1.png"
+                  src="/logos/arb1.png"
                   alt="Front Anti-Roll Bar"
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden  ">
                 <img
-                  src="/public/logos/arb2.png"
+                  src="/logos/arb2.png"
                   alt="Rear Anti-Roll Bar"
                   className="w-full h-auto object-cover"
                 />
@@ -140,7 +140,7 @@ function FormulaBuckeyes() {
             {/* PDF Embed */}
             <div className="rounded-lg overflow-hidden shadow-md">
               <iframe
-                src="/public/logos/arbdesignfinal.pdf"
+                src="/logos/arbdesignfinal.pdf"
                 className="w-full h-[500px]"
                 title="Anti-Roll Bar Design Document"
               />
@@ -161,14 +161,14 @@ function FormulaBuckeyes() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb7.jpg"
+                    src="/logos/fb7.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb2.jpg"
+                    src="/logos/fb2.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />
@@ -179,14 +179,14 @@ function FormulaBuckeyes() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb3.jpg"
+                    src="/logos/fb3.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb6.jpg"
+                    src="/logos/fb6.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />
@@ -197,14 +197,14 @@ function FormulaBuckeyes() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb10.jpg"
+                    src="/logos/fb10.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/public/logos/fb9.jpg"
+                    src="/logos/fb9.jpg"
                     alt="FSAE Michigan Competition"
                     className="w-full h-auto object-cover"
                   />

@@ -41,7 +41,7 @@ function RocketOptimization() {
 
               <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
                 <img
-                  src="/public/logos/rocketrajectory.webp"
+                  src="/logos/rocketrajectory.webp"
                   alt="Rocket trajectory optimization diagram"
                   className="w-full h-auto"
                 />
@@ -106,7 +106,7 @@ for i in range(self.N - 1):
                 playsInline
                 className="w-full h-auto"
               >
-                <source src="/public/logos/starship_landing.mp4" type="video/mp4" />
+                <source src="/logos/starship_landing.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

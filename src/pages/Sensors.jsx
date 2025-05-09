@@ -42,7 +42,7 @@ function Sensors() {
             {/* PDF Document */}
             <div className="rounded-lg overflow-hidden shadow-md ">
               <iframe
-                src="/public/logos/sensors1.pdf"
+                src="/logos/sensors1.pdf"
                 className="w-full h-[600px]"
                 title="Thermocouple and Seebeck Effect Report"
               />
@@ -63,7 +63,7 @@ function Sensors() {
             {/* PDF Document */}
             <div className="rounded-lg overflow-hidden shadow-md ">
               <iframe
-                src="/public/logos/sensors2.pdf"
+                src="/logos/sensors2.pdf"
                 className="w-full h-[600px]"
                 title="Pressure Transducer and Wheatstone Bridge Report"
               />
@@ -84,7 +84,7 @@ function Sensors() {
             {/* PDF Document */}
             <div className="rounded-lg overflow-hidden shadow-md ">
               <iframe
-                src="/public/logos/sensorproject.pdf"
+                src="/logos/sensorproject.pdf"
                 className="w-full h-[600px]"
                 title="Optical Sensor Calibration for Automatic Hand-wash Report"
               />

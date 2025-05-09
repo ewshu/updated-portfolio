@@ -68,7 +68,7 @@ function Allegion() {
               <div className="space-y-2">
                 <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
                   <img
-                    src="/public/logos/allegionunlock.jpg"
+                    src="/logos/allegionunlock.jpg"
                     alt="Locked Position"
                     className="w-full h-auto object-cover"
                   />
@@ -80,7 +80,7 @@ function Allegion() {
               <div className="space-y-2">
                 <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
                   <img
-                    src="/public/logos/allegionlock.jpg"
+                    src="/logos/allegionlock.jpg"
                     alt="Unlocked Position"
                     className="w-full h-auto object-cover"
                   />
@@ -96,7 +96,7 @@ function Allegion() {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <img
-                src="/public/logos/allegionassembly.png"
+                src="/logos/allegionassembly.png"
                 alt="Exploded Assembly View"
                 className="w-full h-auto object-cover"
               />
@@ -126,7 +126,7 @@ function Allegion() {
                   playsInline
                   className="w-full h-auto object-cover"
                 >
-                  <source src="/public/logos/allegionworking.mp4" type="video/mp4" />
+                  <source src="/logos/allegionworking.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

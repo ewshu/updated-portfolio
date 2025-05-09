@@ -52,14 +52,14 @@ function ArduinoProjects() {
               <div className="space-y-6">
                 <div className="rounded-lg overflow-hidden shadow-md ">
                   <img
-                    src="/public/logos/dlock.png"
+                    src="/logos/dlock.png"
                     alt="RFID Door Lock"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-md ">
                   <img
-                    src="/public/logos/arduino-lock.gif"
+                    src="/logos/arduino-lock.gif"
                     alt="RFID Door Lock Installation"
                     className="w-full h-auto object-cover"
                   />
@@ -75,7 +75,7 @@ function ArduinoProjects() {
                   playsInline
                   className="w-full h-auto"
                 >
-                  <source src="/public/logos/dlock.mp4" type="video/mp4" />
+                  <source src="/logos/dlock.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -119,7 +119,7 @@ function ArduinoProjects() {
                 playsInline
                 className="w-full h-auto object-cover aspect-video"
               >
-                <source src="/public/logos/blinds.mp4" type="video/mp4" />
+                <source src="/logos/blinds.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -129,28 +129,28 @@ function ArduinoProjects() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-lg overflow-hidden shadow-md border">
                   <img
-                    src="/public/logos/1blinds.png"
+                    src="/logos/1blinds.png"
                     alt="Smart Blinds Component Assembly"
                     className="w-full h-auto object-cover aspect-square"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-md border">
                   <img
-                    src="/public/logos/2blinds.png"
+                    src="/logos/2blinds.png"
                     alt="Smart Blinds Motor Mount"
                     className="w-full h-auto object-cover aspect-square"
                   />
                 </div>
                 <div className="rounded-lg shadow-md border flex items-center justify-center overflow-hidden aspect-square">
                   <img
-                    src="/public/logos/3blinds.png"
+                    src="/logos/3blinds.png"
                     alt="Smart Blinds Circuit Assembly"
                     className="w-3/4 h-3/4 object-contain"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden ">
                   <img
-                    src="/public/logos/blinds4.jpg"
+                    src="/logos/blinds4.jpg"
                     alt="Smart Blinds Installation"
                     className="w-full h-auto object-cover aspect-square"
                   />

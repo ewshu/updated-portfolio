@@ -82,7 +82,7 @@ function MiniKeyboard() {
               {/* GIF */}
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/public/logos/keyboard.gif"
+                  src="/logos/keyboard.gif"
                   alt="Mini Keyboard Demo"
                   className="w-full h-96 mx-auto"
                 />
@@ -91,7 +91,7 @@ function MiniKeyboard() {
               {/* First image */}
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/public/logos/keyboard1.jpg"
+                  src="/logos/keyboard1.jpg"
                   alt="Mini Keyboard Top View"
                   className="w-full h-96 mx-auto object-cover"
                 />
@@ -100,7 +100,7 @@ function MiniKeyboard() {
               {/* Second image */}
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/public/logos/keyboard3.jpeg"
+                  src="/logos/keyboard3.jpeg"
                   alt="Mini Keyboard Side View"
                   className="w-full h-96 mx-auto object-cover"
                 />

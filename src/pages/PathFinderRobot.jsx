@@ -47,7 +47,7 @@ function PathFinderRobot() {
                 controls
                 className="w-full h-auto"
               >
-                <source src="/public/logos/pathfinder.mp4" type="video/mp4" />
+                <source src="/logos/pathfinder.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -68,7 +68,7 @@ function PathFinderRobot() {
             {/* PDF Document */}
             <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
               <iframe
-                src="/public/logos/pathfinder.pdf"
+                src="/logos/pathfinder.pdf"
                 className="w-full h-[600px]"
                 title="Pathfinder Robot Final Report"
               />
