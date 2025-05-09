@@ -11,7 +11,7 @@ import FormulaBuckeyes from './pages/FormulaBuckeyes.jsx'
 import Allegion from './pages/Allegion.jsx'
 import MiniKeyboard from './pages/MiniKeyboard.jsx'
 import Sensors from './pages/Sensors.jsx'
-import PathfinderRobot from './pages/PathfinderRobot.jsx'
+import PathfinderRobot from './pages/PathFinderRobot.jsx'
 import './index.css'
 import { ThemeProvider } from './components/theme-provider'
 
