@@ -49,21 +49,21 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-2">
             <ProjectCard
               title="Formula Buckeyes FSAE"
-              imgSrc="/assets/projects/formula-buckeyes.png"
+              imgSrc="/logos/formula-buckeyes.png"
               link="/formula-buckeyes"
               desc="suspension design"
               scale={1.5}
             />
             <ProjectCard
               title="Allegion (R&D Intern)"
-              imgSrc="/assets/projects/interconnect-design.png"
+              imgSrc="/logos/interconnect-design.png"
               link="/allegion"
               desc="electro-mechanical locks"
             />
 
             <ProjectCard
               title="Pathfinder Robot"
-              imgSrc="/assets/projects/pathfinder-robot.png"
+              imgSrc="/logos/pathfinder-robot.png"
               link="/pathfinder-robot"
               desc="using A* algorithm"
               scale={1.2}
@@ -71,7 +71,7 @@ function App() {
             />
             <ProjectCard
               title="Arduino Projects"
-              imgSrc="/assets/projects/rfiddoorlock.png"
+              imgSrc="/logos/rfiddoorlock.png"
               link="/arduino-projects"
               desc="rfid-door lock and alexa-blinds"
               scale = {-0.8}
@@ -79,7 +79,7 @@ function App() {
 
             <ProjectCard
               title="5-Pk Mini Keyboard"
-              imgSrc="/assets/projects/mini-keyboard.png"
+              imgSrc="/logos/mini-keyboard.png"
               link="/mini-keyboard"
               desc="mini-keyboard with 5 most used keys"
               scale={1}
@@ -88,7 +88,7 @@ function App() {
 
             <ProjectCard
               title="Engineering Coursework"
-              imgSrc="/assets/projects/sensor.png"
+              imgSrc="/logos/sensor.png"
               link="/sensors"
               desc="sensors, designs, & data analysis"
               scale={-0.8}

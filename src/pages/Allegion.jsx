@@ -111,7 +111,7 @@ function Allegion() {
               {/* Interconnect Image */}
               <div className="rounded-lg overflow-hidden ">
                 <img
-                  src="/assets/projects/interconnect-design.png"
+                  src="/projects/interconnect-design.png"
                   alt="Interconnect Mechanism"
                   className="w-full h-auto object-cover"
                 />
