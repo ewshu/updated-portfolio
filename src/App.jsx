@@ -61,20 +61,22 @@ function App() {
               desc="electro-mechanical locks"
             />
 
-            <ProjectCard
-              title="Pathfinder Robot"
-              imgSrc="/logos/pathfinder-robot.png"
-              link="/pathfinder-robot"
-              desc="using A* algorithm"
-              scale={1.2}
 
-            />
             <ProjectCard
               title="Arduino Projects"
               imgSrc="/logos/rfiddoorlock.png"
               link="/arduino-projects"
               desc="rfid-door lock and alexa-blinds"
-              scale = {-0.8}
+              scale = {0.8}
+            />
+
+            <ProjectCard
+              title="Pathfinder Robot"
+              imgSrc="/logos/pathfinder-robot.png"
+              link="/pathfinder-robot"
+              desc="using A* algorithm"
+              scale={1}
+
             />
 
             <ProjectCard
@@ -91,7 +93,7 @@ function App() {
               imgSrc="/logos/sensor.png"
               link="/sensors"
               desc="sensors, designs, & data analysis"
-              scale={-0.8}
+              scale={0.8}
 
             />
           </div>
