@@ -1,7 +1,7 @@
 import { Github, Linkedin, Twitter, ArrowUpRight, Instagram } from "lucide-react"
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   return (
@@ -46,7 +46,7 @@ function App() {
             from personal to company projects.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 px-2">
             <ProjectCard
               title="Formula Buckeyes (FSAE)"
               imgSrc="/logos/formula-buckeyes.png"
@@ -98,10 +98,10 @@ function App() {
         </section>
 
 {/* Software Projects Section - After the main project grid */}
-<section id="software-projects" className="max-w-2xl mx-auto px-4 space-y-5 mt-16">
+<section id="software-projects" className="max-w-2xl mx-auto px-4 space-y-5 mt-12 md:mt-16">
   <h2 className="text-xl font-semibold text-black">Software Projects</h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
     {/* Left Column */}
     <div className="space-y-4">
       <Project
@@ -133,7 +133,7 @@ function App() {
 </section>
 
         {/* Experience - Centered with max-width */}
-        <section id="experience" className="max-w-2xl mx-auto px-4 space-y-5">
+        <section id="experience" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
           <h2 className="text-xl font-semibold text-black">Engineering Experience</h2>
           <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#191919" />
           <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="/logos/allegion.svg" link="https://www.allegion.com" bg="#ffffff" />
@@ -197,7 +197,7 @@ function App() {
   Website inspired from <a href="https://kelvinzhang.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Kelvin Zhang</a> and <a href="https://www.christinezhou.info/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Christine Zhou</a>.
 </div>
         {/* Footer - Centered */}
-        <footer className="flex justify-center gap-6 pt-2">
+        <footer className="flex justify-center gap-4 md:gap-6 pt-2">
           <SocialLink href="https://github.com/ewshu" icon={Github} />
           <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
           <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
@@ -210,13 +210,23 @@ function App() {
 
 function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
+  // Add resize listener to detect mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleMouseEnter = () => !isMobile && setIsHovered(true);
+  const handleMouseLeave = () => !isMobile && setIsHovered(false);
 
   return (
     <div className="space-y-2 text-center">
-      {/* Image container */}
       <div
         className="aspect-square flex justify-center"
         onMouseEnter={handleMouseEnter}
@@ -226,20 +236,18 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
           href={link || "#"}
           className="block w-full h-full"
         >
-          {/* Image with grayscale filter that transitions to color on hover */}
           <img
             src={imgSrc}
             alt={title}
             className="w-full h-full object-contain transition-all duration-500"
             style={{
-              filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
-              transform: isHovered ? `scale(${scale * 1.05})` : `scale(${scale})`,
+              filter: isMobile ? 'grayscale(0%)' : (isHovered ? 'grayscale(0%)' : 'grayscale(100%)'),
+              transform: isMobile ? `scale(${scale})` : (isHovered ? `scale(${scale * 1.05})` : `scale(${scale})`),
             }}
           />
         </a>
       </div>
 
-      {/* Title and description below image */}
       <div className="px-1 text-center">
         <h3 className="font-medium text-base text-black">{title}</h3>
         <p className="text-sm text-gray-600">{desc}</p>
