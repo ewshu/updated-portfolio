@@ -6,19 +6,19 @@ function FourBarStudy() {
 
   return (
     <div className="min-h-screen bg-background transition-colors duration-300">
-      <nav className="border-b py-4 px-4">
+      <nav className="border-b py-3 md:py-4 px-4">
         <div className="container mx-auto">
-          <Link to="/" className="text-foreground hover:text-slate-400">← Back to Home</Link>
+          <Link to="/" className="text-sm md:text-base text-foreground hover:text-slate-400">← Back to Home</Link>
         </div>
       </nav>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-4xl font-bold text-foreground text-center">Four Bar Mechanism Motion Study</h1>
+      <div className="container mx-auto px-4 py-6 md:py-8">
+        <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-foreground text-center">Four Bar Mechanism Motion Study</h1>
 
           {/* Project Overview */}
           <div className="space-y-4 text-foreground">
-            <p>
+            <p className="text-sm md:text-base">
               The goal of this project was to assemble a Four-Bar Mechanism with provided parts and perform a motion study
               to observe how the parts interact with each other, obtaining quantitative data on metrics such as torque,
               power, and reaction forces.
@@ -26,12 +26,12 @@ function FourBarStudy() {
 
             {/* Mechanism Components */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold">Mechanism Components</h2>
-              <p>
+              <h2 className="text-xl md:text-2xl font-bold">Mechanism Components</h2>
+              <p className="text-sm md:text-base">
                 The assembly consists of two bearings and three bars. The two fixed bearings can be replaced with one
                 fixed bar without affecting the function of the mechanism, thus the name "four bar". The main parts are:
               </p>
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-1 text-sm md:text-base">
                 <li>Bearing 1: Red part on the left (fixed)</li>
                 <li>Bearing 2: Red part on the right (fixed)</li>
                 <li>Crank: Blue part</li>
@@ -51,14 +51,14 @@ function FourBarStudy() {
 
             {/* Motion Study */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold">The Motion Study</h2>
-              <p>
+              <h2 className="text-xl md:text-2xl font-bold">The Motion Study</h2>
+              <p className="text-sm md:text-base">
                 Before conducting the motion study, we first verified that our assembled mechanism was properly
                 constrained by analyzing its degrees of freedom. Since this was a mechanism, it required exactly
                 one degree of freedom to function correctly. We discovered some redundant mates (connections) that
                 needed to be edited and eliminated to achieve this.
               </p>
-              <p>
+              <p className="text-sm md:text-base">
                 Once we confirmed proper constraint, we set the mechanism in its initial position and installed a
                 motor at the junction between the crank and bearing one to enable rotation. The motor was configured
                 to operate at 20 rpm for 6 seconds. We then initiated the analysis to observe the mechanism's movement.
@@ -67,13 +67,13 @@ function FourBarStudy() {
 
             {/* Analysis */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold">Analysis</h2>
-              <p>
+              <h2 className="text-xl md:text-2xl font-bold">Analysis</h2>
+              <p className="text-sm md:text-base">
                 Motion studies enable collection of data across multiple performance metrics. While traditional hand
                 calculations can be challenging due to complex physics equations, computer-aided analysis performs
                 these calculations almost instantly.
               </p>
-              <p>
+              <p className="text-sm md:text-base">
                 In our study, we tracked the movement of a single point—specifically, the midpoint of the extension—throughout
                 the simulation. The resulting motion data was converted into graphical form for better visualization.
               </p>
@@ -95,7 +95,7 @@ function FourBarStudy() {
                   />
                 </div>
               </div>
-              <p>
+              <p className="text-sm md:text-base">
                 When compared to the time and angle of the crank, the instances of max torque could be determined.
               </p>
 
@@ -108,7 +108,7 @@ function FourBarStudy() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-lg ">
+                <div className="rounded-lg overflow-hidden shadow-lg">
                   <img
                     src="/logos/4bar5.webp"
                     alt="Torque Analysis Graph 2"
@@ -116,7 +116,7 @@ function FourBarStudy() {
                   />
                 </div>
               </div>
-              <p>
+              <p className="text-sm md:text-base">
                 From this data, we observed that the maximum torque was approximately 20.4 N, occurring periodically
                 when the crank was at its initial position (0 degrees). While not shown in this dataset,
                 negative motor torques are also possible.
@@ -134,8 +134,8 @@ function FourBarStudy() {
 
             {/* Conclusion */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold">Conclusion</h2>
-              <p>
+              <h2 className="text-xl md:text-2xl font-bold">Conclusion</h2>
+              <p className="text-sm md:text-base">
                 According to the motion study analysis, the maximum vertical forces on bearings 1 and 2 are 0.35 N and
                 0.17 N respectively. This information is valuable for determining if the assembly can withstand the
                 forces generated by its motion.

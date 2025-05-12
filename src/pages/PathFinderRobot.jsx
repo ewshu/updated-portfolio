@@ -5,23 +5,23 @@ function PathFinderRobot() {
   return (
     <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Nav - Same as home page */}
-      <header className="flex justify-center gap-5 text-sm pt-6">
+      <header className="flex justify-center gap-3 md:gap-5 text-xs md:text-sm pt-4 md:pt-6">
         <NavLink label="About" href="/#about" />
         <NavLink label="Resume" href="/resume" />
         <NavLink label="Portfolio" href="/#projects" />
         <NavLink label="Photos" href="/photos" />
       </header>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-7">
-          <header className="space-y-3">
-            <h1 className="text-4xl font-bold text-black">Pathfinder Robot</h1>
-            <p className="text-gray-600">MATLAB-Based Mobile Robot Navigation | Team Project</p>
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="max-w-4xl mx-auto space-y-5 md:space-y-7">
+          <header className="space-y-2 md:space-y-3">
+            <h1 className="text-2xl md:text-4xl font-bold text-black">Pathfinder Robot</h1>
+            <p className="text-sm md:text-base text-gray-600">MATLAB-Based Mobile Robot Navigation | Team Project</p>
           </header>
 
           {/* Project Overview */}
-          <section className="space-y-5">
-            <div className="space-y-4 text-gray-700">
+          <section className="space-y-4 md:space-y-5">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
               <p>
                 My team's approach to a proposed challenge to model the waiter mobile robot in MATLAB. We developed an algorithm
                 that enables a robot to navigate through a complex environment, avoiding obstacles and finding optimal paths to
@@ -36,8 +36,8 @@ function PathFinderRobot() {
           </section>
 
           {/* Demo Video */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-black">Simulation Demo</h2>
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Simulation Demo</h2>
 
             <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
               <video
@@ -54,10 +54,10 @@ function PathFinderRobot() {
           </section>
 
           {/* Final Report */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-black">Final Report</h2>
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Final Report</h2>
 
-            <div className="space-y-4 text-gray-700">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
               <p>
                 Our final report details the methodology, algorithm development, implementation challenges, and performance analysis
                 of the pathfinder robot simulation. It includes technical specifications, mathematical models, and comparative analysis
@@ -69,17 +69,17 @@ function PathFinderRobot() {
             <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 bg-white">
               <iframe
                 src="/logos/pathfinder.pdf"
-                className="w-full h-[600px]"
+                className="w-full h-[400px] md:h-[600px]"
                 title="Pathfinder Robot Final Report"
               />
             </div>
           </section>
 
           {/* MATLAB Code */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-black">MATLAB Implementation</h2>
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">MATLAB Implementation</h2>
 
-            <div className="space-y-4 text-gray-700">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
               <p>
                 Below is the MATLAB code we developed for the pathfinder robot simulation. The implementation includes
                 obstacle detection, path planning using A* algorithm, and motion control for the robot model.
@@ -88,12 +88,12 @@ function PathFinderRobot() {
           </section>
 
           {/* Bottom Navigation */}
-          <div className="pt-8">
+          <div className="pt-6 md:pt-8">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
+              className="inline-flex items-center gap-2 text-sm md:text-base text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-3 w-3 md:h-4 md:w-4" />
               Back to Portfolio
             </Link>
           </div>
@@ -110,7 +110,7 @@ function NavLink({ label, href }) {
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="px-3 py-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+      className="px-2 md:px-3 py-1.5 md:py-2 rounded-md text-xs md:text-sm text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
     >
       {label}
     </a>
