@@ -99,7 +99,7 @@ function App() {
 
 {/* Software Projects Section - After the main project grid */}
 <section id="software-projects" className="max-w-2xl mx-auto px-4 space-y-5 mt-16">
-  <h2 className="text-xl font-semibold text-black">Other Software Projects</h2>
+  <h2 className="text-xl font-semibold text-black">Software Projects</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     {/* Left Column */}
