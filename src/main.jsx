@@ -11,6 +11,7 @@ import FormulaBuckeyes from './pages/FormulaBuckeyes.jsx'
 import Allegion from './pages/Allegion.jsx'
 import MiniKeyboard from './pages/MiniKeyboard.jsx'
 import Sensors from './pages/Sensors.jsx'
+import FourBarStudy from './pages/FourBarStudy.jsx'
 import PathfinderRobot from './pages/PathFinderRobot.jsx'
 import './index.css'
 import { ThemeProvider } from './components/theme-provider'
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/allegion" element={<Allegion />} />
             <Route path="/mini-keyboard" element={<MiniKeyboard />} />
             <Route path="/sensors" element={<Sensors />} />
+            <Route path="/four-bar-motion" element={<FourBarStudy />} />
             <Route path="/pathfinder-robot" element={<PathfinderRobot />} />
           </Route>
         </Routes>

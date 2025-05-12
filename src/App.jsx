@@ -20,19 +20,19 @@ function App() {
           <h1 className="text-3xl font-bold leading-snug text-black">Eshwar Pamula</h1>
           <div className="space-y-4 text-base leading-relaxed">
             <p>
-              I'm an undergraduate <strong className="text-black">mechanical engineering</strong> student at The Ohio State University.<br/>
-              Currently a powertrain engineering intern at  <a href="https://fluxmarine.com" target="_blank" rel="noopener noreferrer" className=" hover:text-black transition-colors hover:underline">Flux Marine</a>.
+              I'm an undergraduate <strong className="text-black"> Mechanical Engineering</strong> student at The Ohio State University.<br/>
+              Currently a Powertrain Engineering Intern at  <a href="https://fluxmarine.com" target="_blank" rel="noopener noreferrer" className=" hover:text-black transition-colors hover:underline">Flux Marine</a>.
             </p>
             <p>
-              Passionate about engineering, finance, and startups.<br />
-              Seeking <strong className="text-black">full-time engineering roles</strong> from december 2025.
+              Passionate about engineering, clean-tech, and startups.<br />
+              Seeking <strong className="text-black">full-time engineering roles</strong> from December 2025.
             </p>
             <p>
               You can find me on  <a href="https://www.linkedin.com/in/eshwarpamula/" target="_blank" rel="noopener noreferrer" className=" hover:text-black hover:underline transition-colors">linkedin</a> or reach out to me at <a
                 href="mailto:pamula.3@osu.edu"
                 className=" decoration-1 hover:underline hover:text-black transition-colors"
               >
-                pamula.3@osu.edu
+                pamula.3@osu.edu!
               </a>
             </p>
           </div>
@@ -48,7 +48,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-2">
             <ProjectCard
-              title="Formula Buckeyes FSAE"
+              title="Formula Buckeyes (FSAE)"
               imgSrc="/logos/formula-buckeyes.png"
               link="/formula-buckeyes"
               desc="suspension design"
@@ -120,7 +120,7 @@ function App() {
     <div className="space-y-4">
       <Project
         title="Four-Bar Mechanism"
-        link="/four-bar-mechanism"
+        link="/four-bar-motion"
         description="Motion study on 4-bars interaction and dynamics analysis."
       />
       <Project
@@ -134,20 +134,24 @@ function App() {
 
         {/* Experience - Centered with max-width */}
         <section id="experience" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Experience</h2>
+          <h2 className="text-xl font-semibold text-black">Engineering Experience</h2>
           <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#191919" />
           <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="/logos/allegion.svg" link="https://www.allegion.com" bg="#ffffff" />
+           <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
           <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo="/logos/ee.png" link="https://ecosystem-energy.com" bg="#ffffff" />
           <Experience title="Engie" subtitle="Project Engineering Intern" logo = "/logos/engielogo.png" link="https://www.engie-na.com/" bg="#ffffff" />
-          <Experience title="Welsh House Capital" subtitle="Private Equity" logo="/logos/welshhouse.png" link="https://welshhouse.co" bg="#ffffff" />
+
+        </section>
+        <section id="otherexperience" className="max-w-2xl mx-auto px-4 space-y-5">
+          <h2 className="text-xl font-semibold text-black">Other Experience</h2>
+          <Experience title="Welsh House Capital" subtitle="Private Equity Analyst" logo="/logos/welshhouse.png" link="https://welshhouse.co" bg="#ffffff" />
           <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo="/logos/morningbrew.png" link="https://www.morningbrew.com/" bg="#82A6C6" />
-          <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
           <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
         </section>
 
         {/* Research - Centered with max-width */}
         <section id="research" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Research</h2>
+          <h2 className="text-xl font-semibold text-black">Research Work</h2>
           <Research title="Multi-functional Materials and Intelligent Design Lab" link="https://mae.osu.edu/mmidl" description="AI-Driven Topology Optimization for Accelerated Mechanical Design" />
           <Research title="Gear and Power Transmission Laboratory" link="https://mae.osu.edu/gearlab" description="Polymer (torlon) gear properties for commercial applications." />
         </section>
@@ -164,9 +168,10 @@ function App() {
           <div className="space-y-2 text-sm text-gray-700">
             <p><strong className="text-black">Fintech Pitch Competition @ Fisher College</strong> — Inaugural Winner '23</p>
             <p><strong className="text-black">Launchpad @ Ohio State</strong> — Winner '22 and '23</p>
-            <p><strong className="text-black">Formula SAE Michigan (ICE)</strong> — 3rd 2023 and 1st 2024 Overall</p>
-            <p><strong className="text-black">Undergraduate Engineering Research Grant Recipient</strong></p>
+            <p><strong className="text-black">Formula SAE Michigan (ICE)</strong> — 3<sup>rd</sup> 2023 and 1<sup>rd</sup> 2024 Overall</p>
             <p><strong className="text-black">MAE Undergraduate Teaching Assistant Award</strong> - Runner Up</p>
+            <p><strong className="text-black">Undergraduate MAE Research Grant Recipient</strong>- 1 of 10 students.</p>
+
           </div>
         </section>
 
@@ -244,13 +249,21 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
 }
 
 function Project({ title, link, description }) {
+  // Determine if the link is external or internal
+  const isExternal = link.startsWith("http");
+
   return (
     <div className="space-y-1">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4">
+      <a
+        href={link}
+        // Only use target="_blank" for external links
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="font-medium hover:underline underline-offset-4"
+      >
         {title}
-        <ArrowUpRight className="inline ml-1 h-4 w-4 text-gray-600" />
+        <ArrowUpRight className="inline ml-1 h-4 w-4 text-muted-foreground" />
       </a>
-      <p className="text-sm text-gray-600">{description}</p>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   )
 }
