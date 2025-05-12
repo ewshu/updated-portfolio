@@ -7,18 +7,18 @@ function App() {
   return (
     <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
       {/* Nav */}
-      <header className="flex justify-center gap-5 text-sm pt-6">
+      <header className="flex justify-center gap-3 md:gap-5 text-xs md:text-sm pt-4 md:pt-6">
         <NavLink label="About" href="#about" />
         <NavLink label="Resume" href="/resume" />
         <NavLink label="Portfolio" href="#projects" />
         <NavLink label="Photos" href="/photos" />
       </header>
 
-      <main className="container mx-auto pt-20 pb-12 space-y-16">
+      <main className="container mx-auto pt-12 md:pt-20 pb-8 md:pb-12 space-y-12 md:space-y-16">
         {/* About - Centered with max-width */}
-        <section id="about" className="max-w-2xl mx-auto px-4 space-y-6">
-          <h1 className="text-3xl font-bold leading-snug text-black">Eshwar Pamula</h1>
-          <div className="space-y-4 text-base leading-relaxed">
+        <section id="about" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-6">
+          <h1 className="text-2xl md:text-3xl font-bold leading-snug text-black">Eshwar Pamula</h1>
+          <div className="space-y-3 md:space-y-4 text-sm md:text-base leading-relaxed">
             <p>
               I'm an undergraduate <strong className="text-black"> Mechanical Engineering</strong> student at The Ohio State University.<br/>
               Currently a Powertrain Engineering Intern at  <a href="https://fluxmarine.com" target="_blank" rel="noopener noreferrer" className=" hover:text-black transition-colors hover:underline">Flux Marine</a>.
@@ -40,9 +40,9 @@ function App() {
 
 
         {/* Projects - Full width with 3 columns */}
-        <section id="projects" className="w-full max-w-7xl mx-auto space-y-2.5">
-          <h2 className="text-2xl font-extrabold text-black text-center">Engineering Work</h2>
-          <p className="text-center text-sm text-gray-600 mb-8">
+        <section id="projects" className="w-full max-w-7xl mx-auto space-y-2 md:space-y-2.5">
+          <h2 className="text-xl md:text-2xl font-extrabold text-black text-center">Engineering Work</h2>
+          <p className="text-center text-xs md:text-sm text-gray-600 mb-6 md:mb-8">
             from personal to company projects.
           </p>
 
@@ -100,8 +100,8 @@ function App() {
         </section>
 
 {/* Software Projects Section - After the main project grid */}
-<section id="software-projects" className="max-w-2xl mx-auto px-4 space-y-5 mt-12 md:mt-16">
-  <h2 className="text-xl font-semibold text-black">Software Projects</h2>
+<section id="software-projects" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5 mt-8 md:mt-16">
+  <h2 className="text-lg md:text-xl font-semibold text-black">Software Projects</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
     {/* Left Column */}
@@ -136,7 +136,7 @@ function App() {
 
         {/* Experience - Centered with max-width */}
         <section id="experience" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
-          <h2 className="text-xl font-semibold text-black">Engineering Experience</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-black">Engineering Experience</h2>
           <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#191919" />
           <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="/logos/allegion.svg" link="https://www.allegion.com" bg="#ffffff" />
            <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
@@ -144,30 +144,30 @@ function App() {
           <Experience title="Engie" subtitle="Project Engineering Intern" logo = "/logos/engielogo.png" link="https://www.engie-na.com/" bg="#ffffff" />
 
         </section>
-        <section id="otherexperience" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Other Experience</h2>
+        <section id="otherexperience" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
+          <h2 className="text-lg md:text-xl font-semibold text-black">Other Experience</h2>
           <Experience title="Welsh House Capital" subtitle="Private Equity Analyst" logo="/logos/welshhouse.png" link="https://welshhouse.co" bg="#ffffff" />
           <Experience title="Our Future" subtitle="Content Strategy (acq. Morning Brew)" logo="/logos/morningbrew.png" link="https://www.morningbrew.com/" bg="#82A6C6" />
           <Experience title="Ohio State University" subtitle="UTA for Statics & Mechanics of Materials" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
         </section>
 
         {/* Research - Centered with max-width */}
-        <section id="research" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Research Work</h2>
+        <section id="research" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
+          <h2 className="text-lg md:text-xl font-semibold text-black">Research Work</h2>
           <Research title="Multi-functional Materials and Intelligent Design Lab" link="https://mae.osu.edu/mmidl" description="AI-Driven Topology Optimization for Accelerated Mechanical Design" />
           <Research title="Gear and Power Transmission Laboratory" link="https://mae.osu.edu/gearlab" description="Polymer (torlon) gear properties for commercial applications." />
         </section>
 
         {/* Education - Centered with max-width */}
-        <section id="education" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Education</h2>
+        <section id="education" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
+          <h2 className="text-lg md:text-xl font-semibold text-black">Education</h2>
           <Experience title="The Ohio State University" subtitle="Honors Mechanical Engineering, Bachelors" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
         </section>
 
         {/* Awards - Centered with max-width */}
-        <section id="Awards" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Awards</h2>
-          <div className="space-y-2 text-sm text-gray-700">
+        <section id="Awards" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
+          <h2 className="text-lg md:text-xl font-semibold text-black">Awards</h2>
+          <div className="space-y-2 text-xs md:text-sm text-gray-700">
             <p><strong className="text-black">Fintech Pitch Competition @ Fisher College</strong> — Inaugural Winner '23</p>
             <p><strong className="text-black">Launchpad @ Ohio State</strong> — Winner '22 and '23</p>
             <p><strong className="text-black">Formula SAE Michigan (ICE)</strong> — 3<sup>rd</sup> 2023 and 1<sup>rd</sup> 2024 Overall</p>
@@ -178,10 +178,10 @@ function App() {
         </section>
 
         {/* Now - Centered with max-width */}
-        <section id="now" className="max-w-2xl mx-auto px-4 space-y-5">
-          <h2 className="text-xl font-semibold text-black">Now</h2>
-          <p className="text-gray-800">reading, learning piano, and working on ideas for a cleaner future.</p>
-          <div className="h-64 rounded-md overflow-hidden border border-gray-200">
+        <section id="now" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
+          <h2 className="text-lg md:text-xl font-semibold text-black">Now</h2>
+          <p className="text-sm md:text-base text-gray-800">reading, learning piano, and working on ideas for a cleaner future.</p>
+          <div className="h-48 md:h-64 rounded-md overflow-hidden border border-gray-200">
             <MapContainer center={[41.5801, -71.4774]} zoom={9} scrollWheelZoom={false} className="h-full w-full z-0">
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -189,13 +189,13 @@ function App() {
               />
             </MapContainer>
           </div>
-          <div className="flex items-center justify-between text-sm text-gray-600 pt-2">
+          <div className="flex items-center justify-between text-xs md:text-sm text-gray-600 pt-2">
             <span className="font-semibold">Location</span>
             <div className="flex-grow border-t border-dashed mx-3 opacity-30" />
             <span className="text-black">Bristol, RI</span>
           </div>
         </section>
-<div className="max-w-2xl mx-auto px-4 text-center text-xs text-gray-500 mt-3">
+<div className="max-w-2xl mx-auto px-4 text-center text-[10px] md:text-xs text-gray-500 mt-2 md:mt-3">
   Website inspired from <a href="https://kelvinzhang.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Kelvin Zhang</a> and <a href="https://www.christinezhou.info/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Christine Zhou</a>.
 </div>
         {/* Footer - Centered */}
@@ -214,7 +214,6 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Add resize listener to detect mobile
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -226,6 +225,9 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
 
   const handleMouseEnter = () => !isMobile && setIsHovered(true);
   const handleMouseLeave = () => !isMobile && setIsHovered(false);
+
+  // Adjust scale for mobile
+  const mobileScale = scale * 0.8; // Reduce scale by 20% on mobile
 
   return (
     <div className="space-y-2 text-center">
@@ -244,52 +246,49 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
             className="w-full h-full object-contain transition-all duration-500"
             style={{
               filter: isMobile ? 'grayscale(0%)' : (isHovered ? 'grayscale(0%)' : 'grayscale(100%)'),
-              transform: isMobile ? `scale(${scale})` : (isHovered ? `scale(${scale * 1.05})` : `scale(${scale})`),
+              transform: isMobile ? `scale(${mobileScale})` : (isHovered ? `scale(${scale * 1.05})` : `scale(${scale})`),
             }}
           />
         </a>
       </div>
 
       <div className="px-1 text-center">
-        <h3 className="font-medium text-base text-black">{title}</h3>
-        <p className="text-sm text-gray-600">{desc}</p>
+        <h3 className="font-medium text-sm md:text-base text-black">{title}</h3>
+        <p className="text-xs md:text-sm text-gray-600">{desc}</p>
       </div>
     </div>
   );
 }
 
 function Project({ title, link, description }) {
-  // Determine if the link is external or internal
   const isExternal = link.startsWith("http");
 
   return (
     <div className="space-y-1">
       <a
         href={link}
-        // Only use target="_blank" for external links
         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="font-medium hover:underline underline-offset-4"
+        className="font-medium hover:underline underline-offset-4 text-sm md:text-base"
       >
         {title}
-        <ArrowUpRight className="inline ml-1 h-4 w-4 text-muted-foreground" />
+        <ArrowUpRight className="inline ml-1 h-3 w-3 md:h-4 md:w-4 text-muted-foreground" />
       </a>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-xs md:text-sm text-muted-foreground">{description}</p>
     </div>
   )
 }
 
 function Experience({ title, subtitle, logo, link, bg }) {
-  // Determine background color based on logo presence for better contrast
   const bgColor = logo ? bg : "#f8f8f8";
 
   return (
-    <div className="flex items-center gap-4">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-md p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
-        {logo && <img src={logo} alt={title} className="w-8 h-8 object-contain" />}
+    <div className="flex items-center gap-3 md:gap-4">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 md:w-10 md:h-10 rounded-md p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
+        {logo && <img src={logo} alt={title} className="w-6 h-6 md:w-8 md:h-8 object-contain" />}
       </a>
       <div>
-        <p className="text-black font-medium">{title}</p>
-        <p className="text-sm text-gray-600">{subtitle}</p>
+        <p className="text-sm md:text-base text-black font-medium">{title}</p>
+        <p className="text-xs md:text-sm text-gray-600">{subtitle}</p>
       </div>
     </div>
   )
@@ -298,11 +297,11 @@ function Experience({ title, subtitle, logo, link, bg }) {
 function Research({ title, link, description }) {
   return (
     <div className="space-y-1">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4 text-sm md:text-base">
         {title}
-        <ArrowUpRight className="inline ml-1 h-4 w-4 text-gray-600" />
+        <ArrowUpRight className="inline ml-1 h-3 w-3 md:h-4 md:w-4 text-gray-600" />
       </a>
-      <p className="text-sm text-gray-600">{description}</p>
+      <p className="text-xs md:text-sm text-gray-600">{description}</p>
     </div>
   )
 }
@@ -310,7 +309,7 @@ function Research({ title, link, description }) {
 function SocialLink({ href, icon: Icon }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="text-gray-700 transition-colors hover:text-black">
-      <Icon className="h-5 w-5" />
+      <Icon className="h-4 w-4 md:h-5 md:w-5" />
     </a>
   )
 }
@@ -322,7 +321,7 @@ function NavLink({ label, href }) {
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="px-3 py-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+      className="px-2 md:px-3 py-1.5 md:py-2 rounded-md text-xs md:text-sm text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
     >
       {label}
     </a>
