@@ -17,7 +17,7 @@ function App() {
       <main className="container mx-auto pt-12 md:pt-20 pb-8 md:pb-12 space-y-12 md:space-y-16">
         {/* About - Centered with max-width */}
         <section id="about" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-6">
-          <h1 className="text-2xl md:text-3xl font-bold leading-snug text-black">Eshwar Pamula</h1>
+          <h1 className="text-2xl md:text-3xl font-bold leading-snug text-black">ESHWAR PAMULA</h1>
           <div className="space-y-3 md:space-y-4 text-sm md:text-base leading-relaxed">
             <p>
               I'm an undergraduate <strong className="text-black"> Mechanical Engineering</strong> student at The Ohio State University.<br/>
@@ -201,15 +201,18 @@ function App() {
             <span className="text-black">Bristol, RI</span>
           </div>
         </section>
-<div className="max-w-2xl mx-auto px-4 text-center text-[10px] md:text-xs text-gray-500 mt-2 md:mt-3">
-  Website inspired from <a href="https://kelvinzhang.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Kelvin Zhang</a> and <a href="https://www.christinezhou.info/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Christine Zhou</a>.
-</div>
-        {/* Footer - Centered */}
-        <footer className="flex justify-center gap-4 md:gap-6 pt-2">
-          <SocialLink href="https://github.com/ewshu" icon={Github} />
-          <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
-          <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
-          <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+
+        {/* Footer with Copyright and Social Links */}
+        <footer className="max-w-2xl mx-auto px-4 flex justify-between items-center pt-4 md:pt-6 border-t border-dashed border-gray-300">
+          <div className="text-sm text-gray-500">
+            © 2025 Eshwar Pamula. All rights reserved.
+          </div>
+          <div className="flex gap-4 md:gap-6">
+            <SocialLink href="https://github.com/ewshu" icon={Github} />
+            <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
+            <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
+            <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+          </div>
         </footer>
       </main>
     </div>

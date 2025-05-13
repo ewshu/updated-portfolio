@@ -6,10 +6,14 @@ function Resume() {
       {/* Full-screen PDF viewer */}
       <iframe
         src="/logos/resume.pdf"
-        className="w-full h-screen"
-        title="Eshwar Pamula Resume"
-        style={{ border: 'none' }}
+        className="w-full h-[800px] md:h-[1000px]"
+        title="Resume"
       />
+
+      {/* Copyright Footer */}
+      <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
+        © 2025 Eshwar Pamula. All rights reserved.
+      </div>
     </div>
   );
 }

@@ -113,14 +113,19 @@ for i in range(self.N - 1):
           </section>
 
           {/* Bottom Navigation */}
-          <div className="pt-8">
+          <div className="pt-6 md:pt-8">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
+              className="inline-flex items-center gap-2 text-sm md:text-base text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-3 w-3 md:h-4 md:w-4" />
               Back to Portfolio
             </Link>
+          </div>
+
+          {/* Copyright Footer */}
+          <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
+            © 2025 Eshwar Pamula. All rights reserved.
           </div>
         </div>
       </div>

@@ -145,6 +145,11 @@ function Allegion() {
               Back to Portfolio
             </Link>
           </div>
+
+          {/* Copyright Footer */}
+          <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
+            © 2025 Eshwar Pamula. All rights reserved.
+          </div>
         </div>
       </div>
     </div>

@@ -56,6 +56,11 @@ function Photos() {
           <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
           <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
         </footer>
+
+        {/* Copyright Footer */}
+        <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
+          © 2025 Eshwar Pamula. All rights reserved.
+        </div>
       </main>
     </div>
   )
