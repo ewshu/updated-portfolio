@@ -112,15 +112,18 @@ function App() {
         link="https://www.howlateisyourflight.com/"
         description="Figure out the best airline based on your departure airport and month."
       />
-    </div>
 
-    {/* Right Column */}
-    <div className="space-y-4">
       <Project
         title="Four-Bar Mechanism"
         link="/four-bar-motion"
         description="Motion study on 4-bars interaction and dynamics analysis."
       />
+
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-4">
+
       <Project
         title="Rocket-Landing Path Optimization"
         link="/rocket-optimization"
