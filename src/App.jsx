@@ -21,7 +21,7 @@ function App() {
           <div className="space-y-3 md:space-y-4 text-sm md:text-base leading-relaxed">
             <p>
               I'm an undergraduate <strong className="text-black"> Mechanical Engineering</strong> student at The Ohio State University.<br/>
-              Currently a Powertrain Engineering Intern at  <a href="https://fluxmarine.com" target="_blank" rel="noopener noreferrer" className=" hover:text-black transition-colors hover:underline">Flux Marine</a>.
+                {/*Currently a Powertrain Engineering Intern at  <a href="https://fluxmarine.com" target="_blank" rel="noopener noreferrer" className=" hover:text-black transition-colors hover:underline">Flux Marine</a>.*/}
             </p>
             <p>
               Passionate about engineering, clean-tech, and startups.<br />
@@ -143,7 +143,7 @@ function App() {
         {/* Experience - Centered with max-width */}
         <section id="experience" className="max-w-2xl mx-auto px-4 space-y-4 md:space-y-5">
           <h2 className="text-lg md:text-xl font-semibold text-black">Engineering Experience</h2>
-          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern (Incoming)" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#191919" />
+          <Experience title="Flux Marine" subtitle="Powertrain Engineering Intern" logo="/logos/fluxmarine.png" link="https://fluxmarine.com" bg="#191919" />
           <Experience title="Allegion" subtitle="Electro-Mechanical Engineering Intern (R&D)" logo="/logos/allegion.svg" link="https://www.allegion.com" bg="#ffffff" />
            <Experience title="Ohio State University (MMIDL)" subtitle="Undergraduate Researcher" logo="/logos/osulogo.png" link="https://mae.osu.edu/" bg="#f0f0f0" />
           <Experience title="Ecosystem Energy" subtitle="Mechanical Engineering Intern" logo="/logos/ee.png" link="https://ecosystem-energy.com" bg="#ffffff" />
