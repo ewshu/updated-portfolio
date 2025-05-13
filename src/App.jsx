@@ -106,11 +106,7 @@ function App() {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
     {/* Left Column */}
     <div className="space-y-4">
-      <Project
-        title="Formula-1 Race Winner Predictor"
-        link="https://predictf1.streamlit.app/"
-        description="Predicts driver performance based on historical data."
-      />
+
       <Project
         title="Flight Delay Analysis"
         link="https://www.howlateisyourflight.com/"
@@ -130,6 +126,13 @@ function App() {
         link="/rocket-optimization"
         description="Optimization of landing trajectories for reusable rocket boosters."
       />
+
+      <Project
+        title="Formula-1 Race Winner Predictor"
+        link="https://predictf1.streamlit.app/"
+        description="ML model to predict the race winner (WIP)."
+      />
+
     </div>
   </div>
 </section>
