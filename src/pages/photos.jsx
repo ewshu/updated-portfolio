@@ -1,5 +1,5 @@
-import { NavLink } from "../App"
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { NavLink } from "../App"
 
 function SocialLink({ href, icon: Icon }) {
   return (
@@ -7,7 +7,7 @@ function SocialLink({ href, icon: Icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="transition-colors hover:text-white"
+      className="transition-colors hover:text-black"
     >
       <Icon className="h-4 w-4 md:h-5 md:w-5" />
     </a>
@@ -16,17 +16,21 @@ function SocialLink({ href, icon: Icon }) {
 
 function Photos() {
   return (
-    <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
-      {/* Top Nav */}
-      <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 flex gap-3 md:gap-6 text-xs md:text-sm">
-        <NavLink label="About" href="/" />
-        <NavLink label="Resume" href="/resume" />
-        <NavLink label="Portfolio" href="/#projects" />
-        <NavLink label="Photos" href="/photos" />
+    <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)] min-h-screen">
+      {/* Fixed Top Nav Bar */}
+      <header className="fixed top-0 left-0 right-0 bg-[hsl(45,30%,94%)] z-50 border-b border-gray-100">
+        <nav className="w-full py-4 px-2 sm:py-5 sm:px-4 flex flex-col sm:flex-row items-start sm:items-center max-w-3xl mx-auto">
+          <a href="/" className="main-title text-xl sm:text-2xl md:text-3xl flex-shrink-0 hover:opacity-80 transition mb-2 sm:mb-0" style={{ fontFamily: "__Instrument_Serif_127ae0, __Instrument_Serif_Fallback_127ae0" }}>Eshwar Pamula</a>
+          <div className="flex w-full sm:flex-1 sm:justify-end items-center gap-4 sm:gap-8 ml-0 sm:ml-10">
+            <NavLink label="Resume" href="/resume" />
+            <NavLink label="Portfolio" href="/#projects" />
+            <NavLink label="Photos" href="/photos" />
+          </div>
+        </nav>
       </header>
 
       {/* Page Body */}
-      <main className="max-w-4xl mx-auto px-4 pt-24 md:pt-32 pb-12 md:pb-16">
+      <main className="container mx-auto max-w-3xl px-2 sm:px-4 pt-24 pb-4 md:pb-6">
         <p className="text-sm md:text-base mb-6 md:mb-8">
           I love to shoot film (35mm) on my Minolta SRT & Nikon N8008. Here are some of my faves.
         </p>
@@ -49,18 +53,18 @@ function Photos() {
           <img src="/photos/45.jpg" alt="45" className="w-full rounded-md" loading="lazy" />
         </div>
 
-        {/* Social Links Footer */}
-        <footer className="flex justify-center gap-4 md:gap-6 pt-8 md:pt-12">
-          <SocialLink href="https://github.com/ewshu" icon={Github} />
-          <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
-          <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
-          <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+        {/* Footer with Social Icons right-aligned */}
+        <footer className="max-w-3xl mx-auto px-2 sm:px-4 pt-2 md:pt-3 flex flex-col sm:flex-row items-center sm:justify-between mt-4 gap-2 sm:gap-0">
+          <div className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
+            © 2025 Eshwar Pamula. All rights reserved.
+          </div>
+          <div className="flex gap-3 sm:gap-4 ml-0 sm:ml-4">
+            <SocialLink href="https://github.com/ewshu" icon={Github} />
+            <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
+            <SocialLink href="https://twitter.com/ewshu" icon={Twitter} />
+            <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+          </div>
         </footer>
-
-        {/* Copyright Footer */}
-        <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
-          © 2025 Eshwar Pamula. All rights reserved.
-        </div>
       </main>
     </div>
   )

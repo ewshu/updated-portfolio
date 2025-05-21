@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:wght@700&family=Poppins:wght@500;700&display=swap');
+
 @font-face {
   font-family: 'Akkurat';
   src: url('./fonts/akkurat.ttf') format('truetype');
@@ -9,10 +11,43 @@ html {
 }
 
 body {
-  font-family: 'Akkurat', sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
   background-color: hsl(0, 0%, 12%);
   color: hsl(0, 0%, 98%);
+}
+
+h1, .main-title {
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+h2, .section-title {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.section-list-item-title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.section-list-item-subtitle {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.section-list-item-year {
+  color: #bbb;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 @tailwind base;
