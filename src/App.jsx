@@ -73,9 +73,9 @@ function App() {
     <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)] min-h-screen">
       {/* Fixed Top Nav Bar */}
       <header className="fixed top-0 left-0 right-0 bg-[hsl(45,30%,94%)] z-50 border-b border-gray-100">
-        <nav className="w-full py-3 px-2 sm:py-5 sm:px-4 flex flex-col sm:flex-row items-start sm:items-center max-w-3xl mx-auto">
-          <a href="#" className="main-title text-lg sm:text-2xl md:text-3xl flex-shrink-0 hover:opacity-80 transition mb-1 sm:mb-0" style={{ fontFamily: "__Instrument_Serif_127ae0, __Instrument_Serif_Fallback_127ae0" }}>Eshwar Pamula</a>
-          <div className="flex w-full sm:flex-1 sm:justify-end items-center gap-2 sm:gap-8 ml-0 sm:ml-10">
+        <nav className="w-full py-2 sm:py-5 px-2 sm:px-4 flex flex-row items-center justify-between max-w-3xl mx-auto">
+          <a href="#" className="main-title text-base sm:text-2xl md:text-3xl flex-shrink-0 hover:opacity-80 transition" style={{ fontFamily: "__Instrument_Serif_127ae0, __Instrument_Serif_Fallback_127ae0" }}>Eshwar Pamula</a>
+          <div className="flex items-center gap-1 sm:gap-8">
             <NavLink label="Resume" href="/resume" />
             <NavLink label="Portfolio" href="#projects" />
             <NavLink label="Photos" href="/photos" />
@@ -83,7 +83,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="container mx-auto max-w-3xl px-2 sm:px-4 pt-20 sm:pt-24 pb-4 md:pb-6">
+      <main className="container mx-auto max-w-3xl px-2 sm:px-4 pt-16 sm:pt-24 pb-4 md:pb-6">
         {/* About/Intro */}
         <section id="about" className="mb-6 sm:mb-8">
           <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-2">I'm Eshwar. I'm a <span className="font-semibold border-gray-400">mechanical engineering</span> student at <span className="font-semibold border-b border-dashed border-gray-400">The Ohio State University</span>.</p>
@@ -226,8 +226,8 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
       </div>
 
       <div className="px-1 text-center">
-        <h3 className="font-medium text-sm md:text-base text-black">{title}</h3>
-        <p className="text-xs md:text-sm text-gray-600">{desc}</p>
+        <h3 className="font-medium text-xs sm:text-base text-black">{title}</h3>
+        <p className="text-[10px] sm:text-sm text-gray-600">{desc}</p>
       </div>
     </div>
   );
@@ -255,13 +255,13 @@ function Experience({ title, subtitle, logo, link, bg }) {
   const bgColor = logo ? bg : "#f8f8f8";
 
   return (
-    <div className="flex items-center gap-3 md:gap-4">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 md:w-10 md:h-10 rounded-md p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
-        {logo && <img src={logo} alt={title} className="w-6 h-6 md:w-8 md:h-8 object-contain" />}
+    <div className="flex items-center gap-2 sm:gap-4">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-10 sm:h-10 rounded-md p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
+        {logo && <img src={logo} alt={title} className="w-4 h-4 sm:w-8 sm:h-8 object-contain" />}
       </a>
       <div>
-        <p className="text-sm md:text-base text-black font-medium">{title}</p>
-        <p className="text-xs md:text-sm text-gray-600">{subtitle}</p>
+        <p className="text-xs sm:text-base text-black font-medium">{title}</p>
+        <p className="text-[10px] sm:text-sm text-gray-600">{subtitle}</p>
       </div>
     </div>
   )
@@ -294,7 +294,7 @@ function NavLink({ label, href }) {
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 md:py-2 rounded-md text-xs md:text-sm text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+      className="px-1 sm:px-2 md:px-3 py-0.5 sm:py-1.5 md:py-2 rounded-md text-[10px] sm:text-sm text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
     >
       {label}
     </a>
@@ -321,10 +321,10 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
   return (
     <section id={id} className={`w-full py-2 ${className || ''}`}>
       <div className="flex items-center justify-between mb-0">
-        <h2 className={`section-title mb-0 text-base sm:text-lg font-normal ${title === 'Builds' ? 'font-bold' : ''}`}>{title}</h2>
+        <h2 className={`section-title mb-0 text-xs sm:text-lg font-normal ${title === 'Builds' ? 'font-bold' : ''}`}>{title}</h2>
         {resumeLink && (
-          <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-normal bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors border border-gray-200">
-            <ArrowUpRight className="w-3 h-3 mr-1" /> Resume
+          <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-normal bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors border border-gray-200">
+            <ArrowUpRight className="w-2 h-2 sm:w-3 sm:h-3 mr-0.5 sm:mr-1" /> Resume
           </a>
         )}
       </div>
@@ -332,7 +332,6 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
       <div className="border-t border-dotted border-gray-400 mb-0"></div>
       <ul className="divide-y divide-dashed divide-gray-300">
         {items.map((item, i) => {
-          // All items are expandable for Work, only link for others
           const isExpanded = expanded === i;
           const description = item.desc || item.description || "No description provided.";
           const isClickable = isWork;
@@ -343,40 +342,37 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
               onClick={isClickable ? () => setExpanded(isExpanded ? null : i) : undefined}
             >
               <div
-                className={`flex items-center justify-between px-0 py-1 text-xs sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
-                style={{ minHeight: '36px' }}
+                className={`flex items-center justify-between px-0 py-1 text-[10px] sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
+                style={{ minHeight: '32px' }}
               >
-                <div className="flex items-center min-w-0 gap-2">
+                <div className="flex items-center min-w-0 gap-1 sm:gap-2">
                   {item.logo && (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-7 sm:h-7 rounded-md p-1 flex items-center justify-center border border-gray-200 transition-all hover:brightness-90" style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
-                      <img src={item.logo} alt={item.title} className="w-4 h-4 sm:w-5 sm:h-5 object-contain" />
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-5 h-5 sm:w-7 sm:h-7 rounded-md p-0.5 sm:p-1 flex items-center justify-center border border-gray-200 transition-all hover:brightness-90" style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
+                      <img src={item.logo} alt={item.title} className="w-3 h-3 sm:w-5 sm:h-5 object-contain" />
                     </a>
                   )}
                   <div className="flex flex-col min-w-0">
-                    <div className="flex items-center gap-2 min-w-0">
-                      {/* Work: just text, not a link; Others: link+arrow */}
+                    <div className="flex items-center gap-1 sm:gap-2 min-w-0">
                       {isWork ? (
                         <span className="section-list-item-title truncate">{item.title}</span>
                       ) : (
                         <a href={item.link} target="_blank" rel="noopener noreferrer" className="section-list-item-title truncate hover:underline inline-flex items-center" onClick={e => e.stopPropagation()}>
                           {item.title}
-                          {item.link && <ArrowUpRight className="ml-1 w-3 h-3 inline" />}
+                          {item.link && <ArrowUpRight className="ml-0.5 sm:ml-1 w-2 h-2 sm:w-3 sm:h-3 inline" />}
                         </a>
                       )}
-                      {/* Show role/subtitle next to company for Work and Software Builds */}
                       {item.subtitle && (
-                        <span className="section-list-item-subtitle truncate ml-1">{item.subtitle}</span>
+                        <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1">{item.subtitle}</span>
                       )}
                     </div>
                   </div>
                 </div>
                 {item.year && (
-                  <span className="section-list-item-year ml-2 whitespace-nowrap">{item.year}</span>
+                  <span className="section-list-item-year ml-1 sm:ml-2 whitespace-nowrap text-[10px] sm:text-sm">{item.year}</span>
                 )}
               </div>
-              {/* Expandable box for all items (Work only) */}
               {isClickable && isExpanded && (
-                <div className="w-full px-3 py-2 text-xs sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
+                <div className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
                   {description}
                 </div>
               )}
