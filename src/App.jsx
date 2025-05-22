@@ -68,8 +68,6 @@ const allExperience = [...workExperience, ...otherExperience];
 function App() {
   const [expandedWork, setExpandedWork] = useState(null);
   const [expandedSoftware, setExpandedSoftware] = useState(null);
-  const [expandedResearch, setExpandedResearch] = useState(null);
-  const [expandedEducation, setExpandedEducation] = useState(null);
 
   return (
     <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)] min-h-screen">
@@ -131,29 +129,15 @@ function App() {
           isWork={true}
         />
         <div className="my-6 sm:my-8"></div>
-        <SectionList 
-          id="research" 
-          title="Research" 
-          items={research}
-          expanded={expandedResearch}
-          setExpanded={setExpandedResearch}
-          isWork={true}
-        />
+        <SectionList id="research" title="Research" items={research} />
         <div className="my-6 sm:my-8"></div>
-        <SectionList 
-          id="education" 
-          title="Education" 
-          items={education}
-          expanded={expandedEducation}
-          setExpanded={setExpandedEducation}
-          isWork={true}
-        />
+        <SectionList id="education" title="Education" items={education} />
 
         {/* Now/Map Section aligned with other sections */}
         <section id="now" className="w-full py-2">
           <h2 className="section-title font-normal mb-0 text-xs sm:text-base md:text-lg">Now</h2>
           <div className="border-t border-dotted border-gray-400 mb-3 sm:mb-4"></div>
-          <p className="text-[10px] sm:text-sm md:text-base text-gray-800 whitespace-nowrap mb-3 sm:mb-4">reading, learning piano, and working on ideas for a cleaner future.</p>
+          <p className="text-[9.5px] sm:text-sm md:text-base text-gray-800 whitespace-nowrap mb-3 sm:mb-4">reading, learning piano, and working on ideas for a cleaner future.</p>
           <div className="h-28 sm:h-32 md:h-40 lg:h-56 rounded-md overflow-hidden border border-gray-200 w-full mb-3 sm:mb-4">
             <MapContainer center={[41.5801, -71.4774]} zoom={9} scrollWheelZoom={false} className="h-full w-full z-0">
               <TileLayer
@@ -162,7 +146,7 @@ function App() {
               />
             </MapContainer>
           </div>
-          <div className="flex items-center justify-between text-[10px] sm:text-sm text-gray-600 pt-2 sm:pt-3">
+          <div className="flex items-center justify-between text-[9.5px] sm:text-sm text-gray-600 pt-2 sm:pt-3">
             <span className="font-semibold">Location</span>
             <div className="flex-grow border-t border-dashed mx-3 opacity-30" />
             <span className="text-black">Bristol, RI</span>
@@ -276,8 +260,8 @@ function Experience({ title, subtitle, logo, link, bg }) {
         {logo && <img src={logo} alt={title} className="w-3 h-3 sm:w-8 sm:h-8 object-contain" />}
       </a>
       <div>
-        <p className="text-[10px] sm:text-base text-black font-medium">{title}</p>
-        <p className="text-[10px] sm:text-sm text-gray-600">{subtitle}</p>
+        <p className="text-[9.5px] sm:text-base text-black font-medium">{title}</p>
+        <p className="text-[9.5px] sm:text-sm text-gray-600">{subtitle}</p>
       </div>
     </div>
   )
@@ -286,11 +270,11 @@ function Experience({ title, subtitle, logo, link, bg }) {
 function Research({ title, link, description }) {
   return (
     <div className="space-y-0.5 sm:space-y-1">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4 text-[10px] sm:text-base">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4 text-[9.5px] sm:text-base">
         {title}
         <ArrowUpRight className="inline ml-0.5 sm:ml-1 h-2 w-2 sm:h-4 sm:w-4 text-gray-600" />
       </a>
-      <p className="text-[10px] sm:text-sm text-gray-600">{description}</p>
+      <p className="text-[9.5px] sm:text-sm text-gray-600">{description}</p>
     </div>
   )
 }
@@ -339,7 +323,7 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
       <div className="flex items-center justify-between mb-0">
         <h2 className={`section-title mb-0 text-xs sm:text-lg font-normal ${title === 'Builds' ? 'font-bold' : ''}`}>{title}</h2>
         {resumeLink && (
-          <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-normal bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors border border-gray-200">
+          <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg text-[9.5px] sm:text-xs font-normal bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors border border-gray-200">
             <ArrowUpRight className="w-2 h-2 sm:w-3 sm:h-3 mr-0.5 sm:mr-1" /> Resume
           </a>
         )}
@@ -348,8 +332,8 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
       <ul className="divide-y divide-dashed divide-gray-300">
         {items.map((item, i) => {
           const isExpanded = expanded === i;
-          const description = item.desc || item.description || item.subtitle || "No description provided.";
-          const isClickable = isWork || id === "research" || id === "education";
+          const description = item.desc || item.description || "No description provided.";
+          const isClickable = isWork;
           return (
             <li
               key={item.title}
@@ -357,7 +341,7 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
               onClick={isClickable ? () => setExpanded(isExpanded ? null : i) : undefined}
             >
               <div
-                className={`flex items-center justify-between px-0 py-0.5 sm:py-1 text-[10px] sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
+                className={`flex items-center justify-between px-0 py-0.5 sm:py-1 text-[9.5px] sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
                 style={{ minHeight: '28px' }}
               >
                 <div className="flex items-center min-w-0 gap-1 sm:gap-2">
@@ -369,28 +353,25 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-1 sm:gap-2 min-w-0">
                       {isWork ? (
-                        <span className="section-list-item-title truncate text-[10px] sm:text-base">{item.title}</span>
+                        <span className="section-list-item-title truncate text-[9.5px] sm:text-base">{item.title}</span>
                       ) : (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="section-list-item-title truncate hover:underline inline-flex items-center text-[10px] sm:text-base" onClick={e => e.stopPropagation()}>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="section-list-item-title truncate hover:underline inline-flex items-center text-[9.5px] sm:text-base" onClick={e => e.stopPropagation()}>
                           {item.title}
                           {item.link && <ArrowUpRight className="ml-0.5 sm:ml-1 w-2 h-2 sm:w-3 sm:h-3 inline" />}
                         </a>
                       )}
-                      {item.subtitle && !isWork && (
-                        <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1 text-[10px] sm:text-sm">{item.subtitle}</span>
+                      {item.subtitle && (
+                        <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1 text-[9.5px] sm:text-sm">{item.subtitle}</span>
                       )}
                     </div>
-                    {(id === "research" || id === "education") && (
-                      <p className="text-[10px] sm:text-sm text-gray-600 truncate mt-0.5">{description}</p>
-                    )}
                   </div>
                 </div>
                 {item.year && (
-                  <span className="section-list-item-year ml-1 sm:ml-2 whitespace-nowrap text-[10px] sm:text-sm">{item.year}</span>
+                  <span className="section-list-item-year ml-1 sm:ml-2 whitespace-nowrap text-[9.5px] sm:text-sm">{item.year}</span>
                 )}
               </div>
               {isClickable && isExpanded && (
-                <div className="w-full px-2 sm:px-3 py-1 sm:py-2 text-[10px] sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
+                <div className="w-full px-2 sm:px-3 py-1 sm:py-2 text-[9.5px] sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
                   {description}
                 </div>
               )}

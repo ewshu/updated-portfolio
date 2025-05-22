@@ -22,9 +22,9 @@ function Photos() {
         <nav className="w-full py-4 px-2 sm:py-5 sm:px-4 flex flex-col sm:flex-row items-start sm:items-center max-w-3xl mx-auto">
           <a href="/" className="main-title text-xl sm:text-2xl md:text-3xl flex-shrink-0 hover:opacity-80 transition mb-2 sm:mb-0" style={{ fontFamily: "__Instrument_Serif_127ae0, __Instrument_Serif_Fallback_127ae0" }}>Eshwar Pamula</a>
           <div className="flex w-full sm:flex-1 sm:justify-end items-center gap-4 sm:gap-8 ml-0 sm:ml-10">
-            <NavLink label="Resume" href="/resume" />
-            <NavLink label="Portfolio" href="/#projects" />
-            <NavLink label="Photos" href="/photos" />
+        <NavLink label="Resume" href="/resume" />
+        <NavLink label="Portfolio" href="/#projects" />
+        <NavLink label="Photos" href="/photos" />
           </div>
         </nav>
       </header>
@@ -59,10 +59,10 @@ function Photos() {
             © 2025 Eshwar Pamula. All rights reserved.
           </div>
           <div className="flex gap-3 sm:gap-4 ml-0 sm:ml-4">
-            <SocialLink href="https://github.com/ewshu" icon={Github} />
-            <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
+          <SocialLink href="https://github.com/ewshu" icon={Github} />
+          <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
             <SocialLink href="https://twitter.com/ewshu" icon={Twitter} />
-            <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+          <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
           </div>
         </footer>
       </main>
