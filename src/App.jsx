@@ -135,9 +135,9 @@ function App() {
 
         {/* Now/Map Section aligned with other sections */}
         <section id="now" className="w-full py-2">
-          <h2 className="section-title font-normal mb-0 text-sm sm:text-base md:text-lg">Now</h2>
+          <h2 className="section-title font-normal mb-0 text-xs sm:text-base md:text-lg">Now</h2>
           <div className="border-t border-dotted border-gray-400 mb-2"></div>
-          <p className="text-xs sm:text-sm md:text-base text-gray-800">reading, learning piano, and working on ideas for a cleaner future.</p>
+          <p className="text-[9px] sm:text-sm md:text-base text-gray-800 whitespace-nowrap">reading, learning piano, and working on ideas for a cleaner future.</p>
           <div className="h-28 sm:h-32 md:h-40 lg:h-56 rounded-md overflow-hidden border border-gray-200 w-full">
             <MapContainer center={[41.5801, -71.4774]} zoom={9} scrollWheelZoom={false} className="h-full w-full z-0">
               <TileLayer
@@ -146,7 +146,7 @@ function App() {
               />
             </MapContainer>
           </div>
-          <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 pt-1">
+          <div className="flex items-center justify-between text-[9px] sm:text-sm text-gray-600 pt-1">
             <span className="font-semibold">Location</span>
             <div className="flex-grow border-t border-dashed mx-3 opacity-30" />
             <span className="text-black">Bristol, RI</span>
