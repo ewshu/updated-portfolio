@@ -68,6 +68,8 @@ const allExperience = [...workExperience, ...otherExperience];
 function App() {
   const [expandedWork, setExpandedWork] = useState(null);
   const [expandedSoftware, setExpandedSoftware] = useState(null);
+  const [expandedResearch, setExpandedResearch] = useState(null);
+  const [expandedEducation, setExpandedEducation] = useState(null);
 
   return (
     <div className="bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)] min-h-screen">
@@ -129,9 +131,23 @@ function App() {
           isWork={true}
         />
         <div className="my-6 sm:my-8"></div>
-        <SectionList id="research" title="Research" items={research} />
+        <SectionList 
+          id="research" 
+          title="Research" 
+          items={research}
+          expanded={expandedResearch}
+          setExpanded={setExpandedResearch}
+          isWork={true}
+        />
         <div className="my-6 sm:my-8"></div>
-        <SectionList id="education" title="Education" items={education} />
+        <SectionList 
+          id="education" 
+          title="Education" 
+          items={education}
+          expanded={expandedEducation}
+          setExpanded={setExpandedEducation}
+          isWork={true}
+        />
 
         {/* Now/Map Section aligned with other sections */}
         <section id="now" className="w-full py-2">
@@ -332,7 +348,7 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
       <ul className="divide-y divide-dashed divide-gray-300">
         {items.map((item, i) => {
           const isExpanded = expanded === i;
-          const description = item.desc || item.description || "No description provided.";
+          const description = item.desc || item.description || item.subtitle || "No description provided.";
           const isClickable = isWork;
           return (
             <li
@@ -360,7 +376,7 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
                           {item.link && <ArrowUpRight className="ml-0.5 sm:ml-1 w-2 h-2 sm:w-3 sm:h-3 inline" />}
                         </a>
                       )}
-                      {item.subtitle && (
+                      {item.subtitle && !isWork && (
                         <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1 text-[10px] sm:text-sm">{item.subtitle}</span>
                       )}
                     </div>
