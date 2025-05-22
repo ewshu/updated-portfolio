@@ -227,7 +227,7 @@ function ProjectCard({ title, imgSrc, link, desc, scale = 1 }) {
 
       <div className="px-1 text-center">
         <h3 className="font-medium text-xs sm:text-base text-black">{title}</h3>
-        <p className="text-[10px] sm:text-sm text-gray-600">{desc}</p>
+        <p className="text-[9px] sm:text-sm text-gray-600">{desc}</p>
       </div>
     </div>
   );
@@ -256,12 +256,12 @@ function Experience({ title, subtitle, logo, link, bg }) {
 
   return (
     <div className="flex items-center gap-2 sm:gap-4">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-10 sm:h-10 rounded-md p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
-        {logo && <img src={logo} alt={title} className="w-4 h-4 sm:w-8 sm:h-8 object-contain" />}
+      <a href={link} target="_blank" rel="noopener noreferrer" className="w-5 h-5 sm:w-10 sm:h-10 rounded-md p-0.5 sm:p-1 flex items-center justify-center transition-all hover:brightness-90 border border-gray-200" style={{ backgroundColor: bgColor }}>
+        {logo && <img src={logo} alt={title} className="w-3 h-3 sm:w-8 sm:h-8 object-contain" />}
       </a>
       <div>
-        <p className="text-xs sm:text-base text-black font-medium">{title}</p>
-        <p className="text-[10px] sm:text-sm text-gray-600">{subtitle}</p>
+        <p className="text-[9px] sm:text-base text-black font-medium">{title}</p>
+        <p className="text-[9px] sm:text-sm text-gray-600">{subtitle}</p>
       </div>
     </div>
   )
@@ -269,12 +269,12 @@ function Experience({ title, subtitle, logo, link, bg }) {
 
 function Research({ title, link, description }) {
   return (
-    <div className="space-y-1">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4 text-sm md:text-base">
+    <div className="space-y-0.5 sm:space-y-1">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="font-medium text-black hover:underline underline-offset-4 text-[9px] sm:text-base">
         {title}
-        <ArrowUpRight className="inline ml-1 h-3 w-3 md:h-4 md:w-4 text-gray-600" />
+        <ArrowUpRight className="inline ml-0.5 sm:ml-1 h-2 w-2 sm:h-4 sm:w-4 text-gray-600" />
       </a>
-      <p className="text-xs md:text-sm text-gray-600">{description}</p>
+      <p className="text-[9px] sm:text-sm text-gray-600">{description}</p>
     </div>
   )
 }
@@ -328,7 +328,6 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
           </a>
         )}
       </div>
-      {/* Dotted line above the first item */}
       <div className="border-t border-dotted border-gray-400 mb-0"></div>
       <ul className="divide-y divide-dashed divide-gray-300">
         {items.map((item, i) => {
@@ -342,37 +341,37 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
               onClick={isClickable ? () => setExpanded(isExpanded ? null : i) : undefined}
             >
               <div
-                className={`flex items-center justify-between px-0 py-1 text-[10px] sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
-                style={{ minHeight: '32px' }}
+                className={`flex items-center justify-between px-0 py-0.5 sm:py-1 text-[9px] sm:text-sm w-full transition-all duration-200 ${isClickable && !isExpanded ? 'hover:bg-gray-200' : ''}`}
+                style={{ minHeight: '28px' }}
               >
                 <div className="flex items-center min-w-0 gap-1 sm:gap-2">
                   {item.logo && (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-5 h-5 sm:w-7 sm:h-7 rounded-md p-0.5 sm:p-1 flex items-center justify-center border border-gray-200 transition-all hover:brightness-90" style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-4 h-4 sm:w-7 sm:h-7 rounded-md p-0.5 sm:p-1 flex items-center justify-center border border-gray-200 transition-all hover:brightness-90" style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
                       <img src={item.logo} alt={item.title} className="w-3 h-3 sm:w-5 sm:h-5 object-contain" />
                     </a>
                   )}
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-1 sm:gap-2 min-w-0">
                       {isWork ? (
-                        <span className="section-list-item-title truncate">{item.title}</span>
+                        <span className="section-list-item-title truncate text-[9px] sm:text-base">{item.title}</span>
                       ) : (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="section-list-item-title truncate hover:underline inline-flex items-center" onClick={e => e.stopPropagation()}>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="section-list-item-title truncate hover:underline inline-flex items-center text-[9px] sm:text-base" onClick={e => e.stopPropagation()}>
                           {item.title}
                           {item.link && <ArrowUpRight className="ml-0.5 sm:ml-1 w-2 h-2 sm:w-3 sm:h-3 inline" />}
                         </a>
                       )}
                       {item.subtitle && (
-                        <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1">{item.subtitle}</span>
+                        <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1 text-[9px] sm:text-sm">{item.subtitle}</span>
                       )}
                     </div>
                   </div>
                 </div>
                 {item.year && (
-                  <span className="section-list-item-year ml-1 sm:ml-2 whitespace-nowrap text-[10px] sm:text-sm">{item.year}</span>
+                  <span className="section-list-item-year ml-1 sm:ml-2 whitespace-nowrap text-[9px] sm:text-sm">{item.year}</span>
                 )}
               </div>
               {isClickable && isExpanded && (
-                <div className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
+                <div className="w-full px-2 sm:px-3 py-1 sm:py-2 text-[9px] sm:text-sm text-gray-700" style={{ background: 'hsl(45,30%,94%)' }}>
                   {description}
                 </div>
               )}
