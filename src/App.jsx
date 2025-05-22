@@ -349,7 +349,7 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
         {items.map((item, i) => {
           const isExpanded = expanded === i;
           const description = item.desc || item.description || item.subtitle || "No description provided.";
-          const isClickable = isWork;
+          const isClickable = isWork || id === "research" || id === "education";
           return (
             <li
               key={item.title}
@@ -380,6 +380,9 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
                         <span className="section-list-item-subtitle truncate ml-0.5 sm:ml-1 text-[10px] sm:text-sm">{item.subtitle}</span>
                       )}
                     </div>
+                    {(id === "research" || id === "education") && (
+                      <p className="text-[10px] sm:text-sm text-gray-600 truncate mt-0.5">{description}</p>
+                    )}
                   </div>
                 </div>
                 {item.year && (
