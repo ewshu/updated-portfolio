@@ -1,0 +1,199 @@
+import { Link } from "react-router-dom"
+import { ArrowLeft } from "lucide-react"
+
+function FluxMarine() {
+  return (
+    <div className="min-h-screen bg-[hsl(45,30%,94%)] text-[hsl(0,0%,20%)]">
+      {/* Nav - Same as home page */}
+      <header className="flex justify-center gap-3 md:gap-5 text-xs md:text-sm pt-4 md:pt-6">
+        <NavLink label="About" href="/#about" />
+        <NavLink label="Resume" href="/resume" />
+        <NavLink label="Portfolio" href="/#projects" />
+        <NavLink label="Photos" href="/photos" />
+      </header>
+
+      <div className="container mx-auto px-4 py-6 md:py-8">
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-5">
+          <header className="space-y-2 md:space-y-3">
+            <h1 className="text-2xl md:text-4xl font-bold text-black">Flux Marine</h1>
+            <p className="text-sm md:text-base text-gray-600">Electric Motor Manufacturing | Summer 2025</p>
+          </header>
+
+          {/* Overview Section */}
+          <section className="space-y-4 md:space-y-5">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                <em>Note: Due to NDA restrictions, I cannot disclose all technical details or proprietary information from my work at Flux.</em>
+              </p>
+
+              <h3 className="text-lg md:text-xl font-semibold text-black mt-4 md:mt-6">Electric Motor Manufacturing Projects</h3>
+            </div>
+          </section>
+
+          {/* Shrink-Fit Assembly Jig Section */}
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Shrink-Fit Assembly Jig</h2>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                I designed and built a custom arbor press system for stator core shrink-fitting operations.
+              </p>
+              
+              <p>
+                The jig uses a precision pinion and gear rack mechanism inside an 80-20 aluminum extrusion frame to provide controlled force application with high repeatability.
+              </p>
+              
+              <p>
+                The overall process helped ensure that the stator core pieces sat flush in the housing, while maintaining the tight tolerances needed for optimal motor performance.
+              </p>
+
+              <p>
+                <strong>Detailed images of the jig construction and operation shown below.</strong>
+              </p>
+            </div>
+
+            {/* 2x2 Grid of Jig Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/jigisometric.png"
+                  alt="Jig Isometric View"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/jigback.png"
+                  alt="Jig Back View"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/guiderail.png"
+                  alt="Jig Guide Rail Detail"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/baseassembly.png"
+                  alt="Jig Base Assembly"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Custom Segmented Stator Core Assembly Clamp Section */}
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Segmented Stator Core Clamping System</h2>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                I created a specialized clamping system to hold segmented stator core pieces securely during assembly.
+              </p>
+              
+              <p>
+                The solution combines 3D-printed positioning fixtures with metal rings that sit on the heated motor housing for accurate placement at such a high temperature.
+              </p>
+              
+              <p>
+                We were able to ensure consistent alignment and prevent segment movement during the assembly process.
+              </p>
+
+              <p>
+                <strong>Images of the assembly process and tooling setup shown below.</strong>
+              </p>
+            </div>
+
+            {/* Three Clamp Images Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/clamp.png"
+                  alt="Clamp Assembly"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/clampfront.png"
+                  alt="Clamp Front View"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/clampdown.png"
+                  alt="Clamp Down View"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Electric Motor Dynamometer Testing Section */}
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Dynamometer Testing</h2>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                Ran comprehensive validation tests on both prototype and existing electric outboard motors using an in-house built dynamometer.
+              </p>
+              
+              <p>
+                I focused on collecting data for thermal performance, efficiency mapping, and durability assessment to validate design parameters and help future motor development.
+              </p>
+
+              <p>
+                <strong>Testing data and setup configurations available upon request within NDA limitations.</strong>
+              </p>
+            </div>
+
+            {/* Dynamometer Setup Image */}
+            <div className="rounded-lg overflow-hidden">
+              <img
+                src="/logos/dynosetup.png"
+                alt="Dynamometer Testing Setup"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </section>
+
+          {/* Bottom Navigation */}
+          <div className="pt-6 md:pt-8">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm md:text-base text-gray-700 hover:text-black transition-colors underline underline-offset-4 font-medium"
+            >
+              <ArrowLeft className="h-3 w-3 md:h-4 md:w-4" />
+              Back to Portfolio
+            </Link>
+          </div>
+
+          {/* Copyright Footer */}
+          <div className="text-center text-sm text-gray-500 mt-8 md:mt-12">
+            © 2025 Eshwar Pamula. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function NavLink({ label, href }) {
+  const isExternal = href.startsWith("http");
+  return (
+    <a
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="px-2 md:px-3 py-1.5 md:py-2 rounded-md text-xs md:text-sm text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+    >
+      {label}
+    </a>
+  )
+}
+
+export default FluxMarine 

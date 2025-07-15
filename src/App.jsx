@@ -18,6 +18,7 @@ const builds = [
   { title: "Four-Bar Mechanism", subtitle: "Motion/dynamics study", link: "/four-bar-motion", year: "2023" },
   { title: "Rocket-Landing Path Optimization", subtitle: "Reusable booster landing", link: "/rocket-optimization", year: "2025" },
   { title: "Formula-1 Race Winner Predictor", subtitle: "ML race winner (WIP)", link: "https://predictf1.streamlit.app/", year: "2023" },
+  { title: "Pathfinder Robot", subtitle: "using A* algorithm", link: "/pathfinder-robot", year: "2023" },
 ]
 
 // Add console.log to debug
@@ -49,10 +50,10 @@ const movies = [
 ]
 
 const projectCards = [
+  { title: "Flux Marine (Motor Intern)", imgSrc: "/logos/fluxoutboard.png", link: "/flux-marine", desc: "electric propulsion for boats", scale: 1.0 },
   { title: "Formula Buckeyes (FSAE)", imgSrc: "/logos/formula-buckeyes.png", link: "/formula-buckeyes", desc: "suspension design", scale: 1.25 },
   { title: "Allegion (R&D Intern)", imgSrc: "/logos/interconnect-design.png", link: "/allegion", desc: "electro-mechanical locks", scale: 0.95 },
   { title: "Arduino Projects", imgSrc: "/logos/rfiddoorlock.png", link: "/arduino-projects", desc: "rfid-door lock and alexa-blinds", scale: 0.75 },
-  { title: "Pathfinder Robot", imgSrc: "/logos/pathfinder-robot.png", link: "/pathfinder-robot", desc: "using A* algorithm", scale: 0.80 },
   { title: "5-Pk Mini Keyboard", imgSrc: "/logos/mini-keyboard.png", link: "/mini-keyboard", desc: "mini-keyboard with 5 most used keys", scale: 0.95 },
   { title: "Engineering Coursework", imgSrc: "/logos/sensor.png", link: "/sensors", desc: "sensors, designs, & data analysis", scale: 0.75 },
 ]
