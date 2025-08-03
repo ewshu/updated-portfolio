@@ -14,6 +14,7 @@ import Sensors from './pages/Sensors.jsx'
 import FourBarStudy from './pages/FourBarStudy.jsx'
 import PathfinderRobot from './pages/PathFinderRobot.jsx'
 import FluxMarine from './pages/FluxMarine.jsx'
+import RobotArm from './pages/RobotArm.jsx'
 import './index.css'
 import { ThemeProvider } from './components/theme-provider'
 
@@ -35,6 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/four-bar-motion" element={<FourBarStudy />} />
             <Route path="/pathfinder-robot" element={<PathfinderRobot />} />
             <Route path="/flux-marine" element={<FluxMarine />} />
+            <Route path="/robotarm" element={<RobotArm />} />
           </Route>
         </Routes>
       </Router>
