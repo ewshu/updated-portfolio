@@ -118,7 +118,7 @@ function FluxMarine() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/logos/clampfront.png"
+                  src="/logos/segmentjig.png"
                   alt="Clamp Front View"
                   className="w-full h-full object-cover"
                 />
