@@ -63,13 +63,6 @@ function FluxMarine() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/logos/jigback.png"
-                  alt="Jig Back View"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
                   src="/logos/guiderail.png"
                   alt="Jig Guide Rail Detail"
                   className="w-full h-full object-cover"
@@ -79,6 +72,13 @@ function FluxMarine() {
                 <img
                   src="/logos/baseassembly.png"
                   alt="Jig Base Assembly"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/shrinkfitcomplete.jpg"
+                  alt="Shrink Fit Complete"
                   className="w-full h-full object-cover"
                 />
               </div>
