@@ -63,6 +63,13 @@ function FluxMarine() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
+                  src="/logos/jigback.png"
+                  alt="Jig Back View"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
                   src="/logos/guiderail.png"
                   alt="Jig Guide Rail Detail"
                   className="w-full h-full object-cover"
@@ -75,10 +82,32 @@ function FluxMarine() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </section>
+
+          {/* Completed Assembly Section */}
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-xl md:text-2xl font-bold text-black">Completed Assembly</h2>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                The final assembly demonstrates the successful implementation of the shrink-fit process. The completed jig shows the precision alignment and secure fitting achieved through the custom tooling system.
+              </p>
+            </div>
+
+            {/* Two Assembly Images Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="rounded-lg overflow-hidden">
                 <img
                   src="/logos/shrinkfitcomplete.JPG"
-                  alt="Shrink Fit Complete"
+                  alt="Shrink Fit Complete - Stage 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/shrinkfitcomplete2.JPG"
+                  alt="Shrink Fit Complete - Stage 2"
                   className="w-full h-full object-cover"
                 />
               </div>
