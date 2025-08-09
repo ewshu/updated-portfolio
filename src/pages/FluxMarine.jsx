@@ -86,6 +86,7 @@ function FluxMarine() {
           </section>
 
           {/* Custom Segmented Stator Core Assembly Clamp Section */}
+          {/* 
           <section className="space-y-4 md:space-y-6">
             <h2 className="text-xl md:text-2xl font-bold text-black">Segmented Stator Core Clamping System</h2>
 
@@ -107,33 +108,34 @@ function FluxMarine() {
               </p>
             </div>
 
-            {/* Three Clamp Images Side by Side */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/clamp.png"
-                  alt="Clamp Assembly"
-                  className="w-full h-full object-cover"
-                />
+              <div className="rounded-lg overflow-hidden bg-gray-100 border-2 border-gray-300 flex items-center justify-center h-48 md:h-64">
+                <div className="text-center p-4">
+                  <div className="text-gray-600 text-sm md:text-base font-medium">🔒 Image Locked</div>
+                  <div className="text-gray-500 text-xs md:text-sm mt-1">NDA Restrictions</div>
+                  <div className="text-gray-400 text-xs mt-2">Clamp Assembly</div>
+                </div>
               </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/segmentjig.png"
-                  alt="Clamp Front View"
-                  className="w-full h-full object-cover"
-                />
+              <div className="rounded-lg overflow-hidden bg-gray-100 border-2 border-gray-300 flex items-center justify-center h-48 md:h-64">
+                <div className="text-center p-4">
+                  <div className="text-gray-600 text-sm md:text-base font-medium">🔒 Image Locked</div>
+                  <div className="text-gray-500 text-xs md:text-sm mt-1">NDA Restrictions</div>
+                  <div className="text-gray-400 text-xs mt-2">Clamp Front View</div>
+                </div>
               </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/clampdown.png"
-                  alt="Clamp Down View"
-                  className="w-full h-full object-cover"
-                />
+              <div className="rounded-lg overflow-hidden bg-gray-100 border-2 border-gray-300 flex items-center justify-center h-48 md:h-64">
+                <div className="text-center p-4">
+                  <div className="text-gray-600 text-sm md:text-base font-medium">🔒 Image Locked</div>
+                  <div className="text-gray-500 text-xs md:text-sm mt-1">NDA Restrictions</div>
+                  <div className="text-gray-400 text-xs mt-2">Clamp Down View</div>
+                </div>
               </div>
             </div>
           </section>
+          */}
 
           {/* Electric Motor Dynamometer Testing Section */}
+          {/* 
           <section className="space-y-4 md:space-y-6">
             <h2 className="text-xl md:text-2xl font-bold text-black">Dynamometer Testing</h2>
 
@@ -151,15 +153,15 @@ function FluxMarine() {
               </p>
             </div>
 
-            {/* Dynamometer Setup Image */}
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="/logos/dynosetup.png"
-                alt="Dynamometer Testing Setup"
-                className="w-full h-full object-cover"
-              />
+            <div className="rounded-lg overflow-hidden bg-gray-100 border-2 border-gray-300 flex items-center justify-center h-64 md:h-80">
+              <div className="text-center p-4">
+                <div className="text-gray-600 text-sm md:text-base font-medium">🔒 Image Locked</div>
+                <div className="text-gray-500 text-xs md:text-sm mt-1">NDA Restrictions</div>
+                <div className="text-gray-400 text-xs mt-2">Dynamometer Testing Setup</div>
+              </div>
             </div>
           </section>
+          */}
 
           {/* Bottom Navigation */}
           <div className="pt-6 md:pt-8">
