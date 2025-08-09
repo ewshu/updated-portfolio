@@ -77,7 +77,7 @@ function FluxMarine() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/logos/shrinkfitcomplete.jpg"
+                  src="/logos/shrinkfitcomplete.JPG"
                   alt="Shrink Fit Complete"
                   className="w-full h-full object-cover"
                 />
