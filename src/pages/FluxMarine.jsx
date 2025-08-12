@@ -16,7 +16,7 @@ function FluxMarine() {
         <div className="max-w-4xl mx-auto space-y-4 md:space-y-5">
           <header className="space-y-2 md:space-y-3">
             <h1 className="text-2xl md:text-4xl font-bold text-black">Flux Marine</h1>
-            <p className="text-sm md:text-base text-gray-600">Electric Motor Manufacturing | Summer 2025</p>
+            <p className="text-sm md:text-base text-gray-600">Powertrain Engineering | Summer 2025</p>
           </header>
 
           {/* Overview Section */}
@@ -26,7 +26,7 @@ function FluxMarine() {
                 <em>Note: Due to NDA restrictions, I cannot disclose all technical details or proprietary information from my work at Flux.</em>
               </p>
 
-              <h3 className="text-lg md:text-xl font-semibold text-black mt-4 md:mt-6">Electric Motor Manufacturing Projects</h3>
+
             </div>
           </section>
 
@@ -191,6 +191,51 @@ function FluxMarine() {
             </div>
           </section>
           */}
+
+
+
+          {/* Pictures from the Water */}
+          <section className="space-y-4 md:space-y-6">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                <strong>Pictures from the Water</strong>
+              </p>
+            </div>
+
+            {/* Boat Images Layout: 1&2 original size, 3&4 stacked to match height */}
+            <div className="grid grid-cols-3 gap-2 md:gap-4 items-start">
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/logos/boat1.jpg"
+                  alt="Boat 1"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/logos/boat2.jpg"
+                  alt="Boat 2"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="space-y-2 md:space-4">
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src="/logos/boat3.jpg"
+                    alt="Boat 3"
+                    className="w-full h-36 md:h-44 object-cover object-center"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src="/logos/boat4.jpg"
+                    alt="Boat 4"
+                    className="w-full h-36 md:h-44 object-cover object-center"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Bottom Navigation */}
           <div className="pt-6 md:pt-8">
