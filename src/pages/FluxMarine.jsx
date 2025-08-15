@@ -38,22 +38,10 @@ function FluxMarine() {
               <p>
                 I designed and built a custom arbor press system for stator core shrink-fitting operations.
               </p>
-              
-              <p>
-                The jig uses a precision pinion and gear rack mechanism inside an 80-20 aluminum extrusion frame to provide controlled force application with high repeatability.
-              </p>
-              
-              <p>
-                The overall process helped ensure that the stator core pieces sat flush in the housing, while maintaining the tight tolerances needed for optimal motor performance.
-              </p>
-
-              <p>
-                <strong>Detailed images of the jig construction and operation shown below.</strong>
-              </p>
             </div>
 
-            {/* 2x2 Grid of Jig Images */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {/* 3 Jig Images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div className="rounded-lg overflow-hidden">
                 <img
                   src="/logos/jigisometric.png"
@@ -72,13 +60,6 @@ function FluxMarine() {
                 <img
                   src="/logos/guiderail.png"
                   alt="Jig Guide Rail Detail"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/baseassembly.png"
-                  alt="Jig Base Assembly"
                   className="w-full h-full object-cover"
                 />
               </div>
