@@ -16,6 +16,7 @@ import PathfinderRobot from './pages/PathFinderRobot.jsx'
 import FluxMarine from './pages/FluxMarine.jsx'
 import RobotArm from './pages/RobotArm.jsx'
 import BrushlessMiniMotor from './pages/MiscellaneousProjects.jsx'
+import TableTennisRobot from './pages/TableTennisRobot.jsx'
 import './index.css'
 import { ThemeProvider } from './components/theme-provider'
 
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/flux-marine" element={<FluxMarine />} />
             <Route path="/robotarm" element={<RobotArm />} />
             <Route path="/miscellaneous-projects" element={<BrushlessMiniMotor />} />
+            <Route path="/table-tennis-robot" element={<TableTennisRobot />} />
           </Route>
         </Routes>
       </Router>

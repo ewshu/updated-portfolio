@@ -58,6 +58,7 @@ const projectCards = [
   { title: "Allegion (R&D Intern)", imgSrc: "/logos/interconnect-design.png", link: "/allegion", desc: "electro-mechanical locks", scale: 0.95 },
   { title: "Arduino Projects", imgSrc: "/logos/rfiddoorlock.png", link: "/arduino-projects", desc: "rfid-door lock and alexa-blinds", scale: 0.75 },
   { title: "5-Pk Mini Keyboard", imgSrc: "/logos/mini-keyboard.png", link: "/mini-keyboard", desc: "mini-keyboard", scale: 0.95 },
+  { title: "Table Tennis Robot", imgSrc: "/logos/tabletennisbot.png", link: "/table-tennis-robot", desc: "automatic ball launcher", scale: 0.75 },
 ]
 
 // Add other experience to experience section
