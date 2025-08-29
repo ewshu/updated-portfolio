@@ -93,6 +93,7 @@ function App() {
           <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-2">I'm Eshwar. I'm a <span className="font-semibold border-gray-400">mechanical engineering</span> student at <span className="font-semibold border-b border-dashed border-gray-400">The Ohio State University</span>.</p>
           <p className="mb-2 text-xs sm:text-sm md:text-base">I'm passionate about engineering, clean-tech, and startups. Seeking <span className="font-semibold border-b border-dashed border-gray-400">full-time engineering roles</span> from December 2025.</p>
           <p className="mb-2 text-xs sm:text-sm md:text-base">You can find me on <a href="https://www.linkedin.com/in/eshwarpamula/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">LinkedIn</a> or reach out at <a href="mailto:pamula.3@osu.edu" className="underline hover:text-black">pamula.3@osu.edu</a>.</p>
+          <p className="mb-2 text-xs sm:text-sm md:text-base">To download a pdf version of my portfolio, <a href="/logos/portfolio.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">click here</a>.</p>
         </section>
 
         {/* Engineering Projects */}
