@@ -29,8 +29,7 @@ function FormulaBuckeyes() {
 
               <h3 className="text-lg md:text-xl font-semibold text-black mt-4 md:mt-6">My Work</h3>
               <ul className="list-disc list-inside space-y-2 md:space-y-3 ml-0 text-gray-700">
-                <p>Helped design and manufacture 3-piece carbon fiber wheels with 7075-T6 aluminum centers. Machined
-                uprights, mounts, and suspension hard points using mill and lathe operations.
+                <p>Machined uprights, mounts, and suspension hard points using mill and lathe operations.
                 Designed and implemented adjustable anti-roll bar systems for both front and rear suspensions</p>
               </ul>
             </div>

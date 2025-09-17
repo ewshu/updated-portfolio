@@ -15,8 +15,8 @@ function TableTennisRobot() {
       <div className="container mx-auto px-4 py-6 md:py-8">
         <div className="max-w-4xl mx-auto space-y-4 md:space-y-5">
           <header className="space-y-2 md:space-y-3">
-            <h1 className="text-2xl md:text-4xl font-bold text-black">Table Tennis Robot</h1>
-            <p className="text-sm md:text-base text-gray-600">automatic ball launcher| 2025</p>
+            <h1 className="text-2xl md:text-4xl font-bold text-black">Table Tennis Ball Robot</h1>
+            <p className="text-sm md:text-base text-gray-600">Work in Progress | 2025</p>
           </header>
 
           {/* Main Content */}
