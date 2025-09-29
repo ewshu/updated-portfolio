@@ -35,71 +35,7 @@ function FormulaBuckeyes() {
             </div>
           </section>
 
-          {/* Uprights Section */}
-          <section className="space-y-4 md:space-y-6">
-            <h2 className="text-xl md:text-2xl font-bold text-black">Uprights</h2>
-
-            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
-              <p>
-                Our upright design prioritized strength while optimizing for manufacturability and weight reduction.
-                Each component was extensively analyzed using Ansys Static Structure simulation to identify potential
-                stress concentrations and optimize material distribution.
-              </p>
-
-              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 ml-2 md:ml-4 text-gray-700">
-                <li>Front Upright: Machined from 7075-T6 aluminum, weighing only 0.93 lbs</li>
-                <li>Rear Upright: Matched design language with specific adaptations for rear suspension geometry, weighing 1.00 lbs</li>
-                <li>Extensive FEA validation to ensure safety factor while removing unnecessary material</li>
-                <li>Designed with manufacturing constraints in mind to facilitate in-house production</li>
-              </ul>
-            </div>
-
-            {/* Two Images Side by Side */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/uprights1.png"
-                  alt="Front Upright Design"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/logos/uprights2.png"
-                  alt="Rear Upright Design"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* Spindles and Bearings Section */}
-          <section className="space-y-4 md:space-y-6">
-            <h2 className="text-xl md:text-2xl font-bold text-black">Spindles and Bearings</h2>
-
-            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
-              <p>
-                Our wheel assembly design focused on reliability, performance, and weight reduction through
-                thoughtful integration of components and careful selection of bearings.
-              </p>
-
-              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 ml-2 md:ml-4 text-gray-700">
-                <li>Implemented dual SKF 61814-2RS1 deep groove ball bearings for optimal load distribution</li>
-                <li>Integrated rear tripod joints directly into the design, saving approximately 0.98 lbs</li>
-                <li>Strength-driven spindle design with safety factors appropriate for high-performance racing</li>
-                <li>4-lug bolt pattern chosen for redundancy and manufacturing simplicity</li>
-              </ul>
-            </div>
-
-            {/* Single Image Centered */}
-            <div className="rounded-lg overflow-hidden scale-90 md:scale-75">
-              <img
-                src="/logos/spindle.png"
-                alt="Spindle and Bearing Assembly"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </section>
+          
 
           {/* Anti-Roll Bar Section */}
           <section className="space-y-4 md:space-y-6">
