@@ -39,18 +39,18 @@ function FormulaBuckeyes() {
 
           {/* Anti-Roll Bar Section */}
           <section className="space-y-4 md:space-y-6">
-            <h2 className="text-xl md:text-2xl font-bold text-black">Anti-Roll Bar Design and Manufacture</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-black">Front Anti-Roll Bar</h2>
 
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
               <p>
-                I designed adjustable anti-roll bar (ARB) systems for both front and rear suspensions to fine-tune
+                I designed adjustable anti-roll bar (ARB) systems for both front suspensions to fine-tune
                 the vehicle's handling characteristics and lateral load transfer distribution.
               </p>
 
               <ul className="list-disc list-inside space-y-1.5 md:space-y-2 ml-2 md:ml-4 text-gray-700">
-                <li>Front and rear ARBs feature multiple adjustment points to modify lateral load transfer distribution</li>
+                <li>Front ARB features multiple adjustment points to modify lateral load transfer distribution. Allowed for a wide enough adjustment range to achieve over/under-steer at any time according to driver preference.</li>
                 <li>Chassis design was analyzed to ensure torsional stiffness did not compromise ARB effectiveness</li>
-                <li>Three front inboard mounting positions for additional tuning capability for load transfer and anti-dive characteristics</li>
+                <li>Three front inboard mounting positions for additional tuning capability for load transfer</li>
               </ul>
             </div>
 
@@ -72,14 +72,55 @@ function FormulaBuckeyes() {
               </div>
             </div>
 
-            {/* PDF Embed */}
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <iframe
-                src="/logos/arbdesignfinal.pdf"
-                className="w-full h-[300px] md:h-[500px]"
-                title="Anti-Roll Bar Design Document"
-              />
+            {/* Car Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/arboncar1.png"
+                  alt="Anti-Roll Bar on Car 1"
+                  className="w-full h-56 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/arboncar2.png"
+                  alt="Anti-Roll Bar on Car 2"
+                  className="w-full h-56 object-cover"
+                />
+              </div>
             </div>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                Using a T-bar setup in the front leads to a longer moment arm. Wanted to keep height below the top of the chassis.
+              </p>
+            </div>
+
+            {/* Results Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/arbresult1.png"
+                  alt="Anti-Roll Bar Results 1"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/logos/arbresult2.png"
+                  alt="Anti-Roll Bar Results 2"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
+              <p>
+                The theoretical roll stiffness without ARB (excluding tire) was 702 N⋅m/rad, with measured values at 738 N⋅m/rad. 
+                With the front ARB implemented, theoretical roll stiffness increased to 752 N⋅m/rad, while measured values reached 796.85 N⋅m/rad.
+              </p>
+            </div>
+
           </section>
 
           {/* Competition Photos */}

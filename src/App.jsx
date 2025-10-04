@@ -54,10 +54,10 @@ const projectCards = [
   { title: "Flux Marine (Motor Intern)", imgSrc: "/logos/fluxoutboard.png", link: "/flux-marine", desc: "electric propulsion for boats", scale: 1.0 },
   { title: "Formula Buckeyes (FSAE)", imgSrc: "/logos/formula-buckeyes.png", link: "/formula-buckeyes", desc: "suspension design", scale: 1.25 },
   { title: "Brushless Mini Motor", imgSrc: "/logos/miscproject1.png", link: "/miscellaneous-projects", desc: "first build from scratch", scale: 1.0 },
-  { title: "Robot Arm", imgSrc: "/logos/robotarm.png", link: "/robotarm", desc: "robotic arm design", scale: 1.0 },
   { title: "Allegion (R&D Intern)", imgSrc: "/logos/interconnect-design.png", link: "/allegion", desc: "electro-mechanical locks", scale: 0.95 },
   { title: "Arduino Projects", imgSrc: "/logos/rfiddoorlock.png", link: "/arduino-projects", desc: "rfid-door lock and alexa-blinds", scale: 0.75 },
   { title: "5-Pk Mini Keyboard", imgSrc: "/logos/mini-keyboard.png", link: "/mini-keyboard", desc: "mini-keyboard", scale: 0.95 },
+  { title: "Robot Arm", imgSrc: "/logos/robotarm.png", link: "/robotarm", desc: "robotic arm design", scale: 1.0 },
   { title: "Table Tennis Robot", imgSrc: "/logos/tabletennisbot.png", link: "/table-tennis-robot", desc: "automatic ball launcher", scale: 0.75 },
 ]
 
