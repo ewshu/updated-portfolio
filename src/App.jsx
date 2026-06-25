@@ -144,7 +144,7 @@ function App() {
           <div className="border-t border-dotted border-gray-400 mb-3 sm:mb-4"></div>
           <p className="text-[9.5px] sm:text-sm md:text-base text-gray-800 whitespace-nowrap mb-3 sm:mb-4">reading, learning piano, and working on ideas for a cleaner future.</p>
           <div className="h-28 sm:h-32 md:h-40 lg:h-56 rounded-md overflow-hidden border border-gray-200 w-full mb-3 sm:mb-4">
-            <MapContainer center={[41.5801, -71.4774]} zoom={9} scrollWheelZoom={false} className="h-full w-full z-0">
+            <MapContainer center={[42.3601, -71.0589]} zoom={11} scrollWheelZoom={false} className="h-full w-full z-0">
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -154,7 +154,7 @@ function App() {
           <div className="flex items-center justify-between text-[9.5px] sm:text-sm text-gray-600 pt-2 sm:pt-3">
             <span className="font-semibold">Location</span>
             <div className="flex-grow border-t border-dashed mx-3 opacity-30" />
-            <span className="text-black">Bristol, RI</span>
+            <span className="text-black">Boston, MA</span>
           </div>
         </section>
 
