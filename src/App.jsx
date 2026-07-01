@@ -6,7 +6,8 @@ import './index.css'
 
 // Data-driven content
 const workExperience = [
-  { title: "Flux Marine", subtitle: "Powertrain Engineering Intern", logo: "/logos/fluxmarine.png", link: "https://fluxmarine.com", year: "2025", bg: "#191919", desc: "Series A startup working on electric boats. Incoming Summer 2025" },
+  { title: "Lila Sciences", subtitle: "Mechanical Engineer I", logo: "/logos/lila.png", link: "https://www.lila.ai/", year: "Jan 2026–Present", bg: "#ffffff", desc: "Helping build autonomous labs for life and physical sciences." },
+  { title: "Flux Marine", subtitle: "Powertrain Engineering Intern", logo: "/logos/fluxmarine.png", link: "https://fluxmarine.com", year: "2025", bg: "#191919", desc: "Helped develop the first generation of electric motors for boating" },
   { title: "Allegion", subtitle: "Electro-Mechanical Engineering Intern (R&D)", logo: "/logos/allegion.svg", link: "https://www.allegion.com", year: "2024", bg: "#ffffff", desc: "New Product Development on Schalge Residential locks (NYSE: ALLE)." },
   { title: "Ohio State University (MMIDL)", subtitle: "Undergraduate Researcher", logo: "/logos/osulogo.png", link: "https://mae.osu.edu/", year: "2024", bg: "#f0f0f0", desc: "AI-enhanced Topology Optimization." },
   { title: "Ecosystem Energy", subtitle: "Mechanical Engineering Intern", logo: "/logos/ee.png", link: "https://ecosystem-energy.com", year: "2023", bg: "#ffffff", desc: "Energy Conservation projects for Ohio State." },
