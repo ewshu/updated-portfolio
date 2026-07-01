@@ -6,7 +6,7 @@ import './index.css'
 
 // Data-driven content
 const workExperience = [
-  { title: "Lila Sciences", subtitle: "Mechanical Engineer I", logo: "/logos/lila.png", link: "https://www.lila.ai/", year: "Jan 2026–Present", bg: "#ffffff", desc: "Helping build autonomous labs for life and physical sciences." },
+  { title: "Lila Sciences", subtitle: "Mechanical Engineer I", logo: "/logos/lila.jpeg", link: "https://www.lila.ai/", year: "2026–Present", bg: "#ffffff", desc: "Helping build autonomous labs for life and physical sciences. Backed by General Catalyst & NVIDIA" },
   { title: "Flux Marine", subtitle: "Powertrain Engineering Intern", logo: "/logos/fluxmarine.png", link: "https://fluxmarine.com", year: "2025", bg: "#191919", desc: "Helped develop the first generation of electric motors for boating" },
   { title: "Allegion", subtitle: "Electro-Mechanical Engineering Intern (R&D)", logo: "/logos/allegion.svg", link: "https://www.allegion.com", year: "2024", bg: "#ffffff", desc: "New Product Development on Schalge Residential locks (NYSE: ALLE)." },
   { title: "Ohio State University (MMIDL)", subtitle: "Undergraduate Researcher", logo: "/logos/osulogo.png", link: "https://mae.osu.edu/", year: "2024", bg: "#f0f0f0", desc: "AI-enhanced Topology Optimization." },
