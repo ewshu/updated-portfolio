@@ -6,7 +6,7 @@ import './index.css'
 
 // Data-driven content
 const workExperience = [
-  { title: "Lila Sciences", subtitle: "Mechanical Engineer I", logo: "/logos/lila.jpeg", link: "https://www.lila.ai/", year: "2026–Present", bg: "#ffffff", desc: "Helping build autonomous labs for life and physical sciences. Backed by General Catalyst & NVIDIA" },
+  { title: "Lila Sciences", subtitle: "Mechanical Engineer I", logo: "/logos/lila.jpeg", link: "https://www.lila.ai/", year: "2026–Present", bg: "#000000", logoCover: true, desc: "Helping build autonomous labs for life and physical sciences. Backed by General Catalyst & NVIDIA" },
   { title: "Flux Marine", subtitle: "Powertrain Engineering Intern", logo: "/logos/fluxmarine.png", link: "https://fluxmarine.com", year: "2025", bg: "#191919", desc: "Helped develop the first generation of electric motors for boating" },
   { title: "Allegion", subtitle: "Electro-Mechanical Engineering Intern (R&D)", logo: "/logos/allegion.svg", link: "https://www.allegion.com", year: "2024", bg: "#ffffff", desc: "New Product Development on Schalge Residential locks (NYSE: ALLE)." },
   { title: "Ohio State University (MMIDL)", subtitle: "Undergraduate Researcher", logo: "/logos/osulogo.png", link: "https://mae.osu.edu/", year: "2024", bg: "#f0f0f0", desc: "AI-enhanced Topology Optimization." },
@@ -352,8 +352,8 @@ function SectionList({ id, title, items, resumeLink, expanded, setExpanded, isWo
               >
                 <div className="flex items-center min-w-0 gap-1 sm:gap-2">
                   {item.logo && (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-4 h-4 sm:w-7 sm:h-7 rounded-md p-0.5 sm:p-1 flex items-center justify-center border border-gray-200 transition-all hover:brightness-90" style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
-                      <img src={item.logo} alt={item.title} className="w-3 h-3 sm:w-5 sm:h-5 object-contain" />
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className={`w-4 h-4 sm:w-7 sm:h-7 rounded-md flex items-center justify-center border border-gray-200 transition-all hover:brightness-90 ${item.logoCover ? 'p-0 overflow-hidden' : 'p-0.5 sm:p-1'}`} style={{ backgroundColor: item.bg || '#fff' }} onClick={e => e.stopPropagation()}>
+                      <img src={item.logo} alt={item.title} className={item.logoCover ? 'w-full h-full object-cover' : 'w-3 h-3 sm:w-5 sm:h-5 object-contain'} />
                     </a>
                   )}
                   <div className="flex flex-col min-w-0">
