@@ -15,10 +15,10 @@ const workExperience = [
 ]
 
 const builds = [
-  { title: "Flight Delay Analysis", subtitle: "Best airline by airport/month", link: "https://www.howlateisyourflight.com/", year: "2024" },
+  // { title: "Flight Delay Analysis", subtitle: "Best airline by airport/month", link: "https://www.howlateisyourflight.com/", year: "2024" },
   { title: "Four-Bar Mechanism", subtitle: "Motion/dynamics study", link: "/four-bar-motion", year: "2023" },
   { title: "Rocket-Landing Path Optimization", subtitle: "Reusable booster landing", link: "/rocket-optimization", year: "2025" },
-  { title: "Formula-1 Race Winner Predictor", subtitle: "ML race winner (WIP)", link: "https://predictf1.streamlit.app/", year: "2023" },
+  // { title: "Formula-1 Race Winner Predictor", subtitle: "ML race winner (WIP)", link: "https://predictf1.streamlit.app/", year: "2023" },
   { title: "Pathfinder Robot", subtitle: "using A* algorithm", link: "/pathfinder-robot", year: "2023" },
   { title: "Sensor Calibrations", subtitle: "sensors, designs, & data analysis", link: "/sensors", year: "2023" },
 ]
