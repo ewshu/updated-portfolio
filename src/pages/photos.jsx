@@ -61,8 +61,8 @@ function Photos() {
           <div className="flex gap-3 sm:gap-4 ml-0 sm:ml-4">
           <SocialLink href="https://github.com/ewshu" icon={Github} />
           <SocialLink href="https://linkedin.com/in/eshwarpamula" icon={Linkedin} />
-            <SocialLink href="https://twitter.com/ewshu" icon={Twitter} />
-          <SocialLink href="https://instagram.com/eshwar.25" icon={Instagram} />
+            <SocialLink href="https://twitter.com/ewshwar" icon={Twitter} />
+          <SocialLink href="https://instagram.com/e8shw4r" icon={Instagram} />
           </div>
         </footer>
       </main>
